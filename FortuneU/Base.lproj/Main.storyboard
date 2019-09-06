@@ -205,11 +205,11 @@
             </objects>
             <point key="canvasLocation" x="2374" y="2616"/>
         </scene>
-        <!--Item-->
+        <!--Goal-->
         <scene sceneID="acf-7i-gsA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="040-Uy-GDX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rAe-gb-NYD"/>
+                    <tabBarItem key="tabBarItem" title="Goal" id="rAe-gb-NYD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="htd-4y-7a3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -243,11 +243,11 @@
             </objects>
             <point key="canvasLocation" x="558" y="945"/>
         </scene>
-        <!--Item-->
+        <!--Record-->
         <scene sceneID="P8a-0t-Efq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GOx-fX-ZDR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="kPD-MD-OCW"/>
+                    <tabBarItem key="tabBarItem" title="Record" id="kPD-MD-OCW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6jc-cU-n4Z">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -262,11 +262,11 @@
             </objects>
             <point key="canvasLocation" x="1467" y="1781"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="DwP-9J-gs7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MsK-bA-Dng" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="O5x-mU-BAv"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="O5x-mU-BAv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aGT-IW-2ae">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
