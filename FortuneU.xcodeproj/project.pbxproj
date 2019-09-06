@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5E75F7A23222BBE00659C4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75F7923222BBE00659C4E /* AppDelegate.m */; };
+		A5E75F7D23222BBE00659C4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75F7C23222BBE00659C4E /* ViewController.m */; };
+		A5E75F8023222BBE00659C4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E75F7E23222BBE00659C4E /* Main.storyboard */; };
+		A5E75F8223222BC000659C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E75F8123222BC000659C4E /* Assets.xcassets */; };
+		A5E75F8523222BC000659C4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E75F8323222BC000659C4E /* LaunchScreen.storyboard */; };
+		A5E75F8823222BC000659C4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75F8723222BC000659C4E /* main.m */; };
+		A5E75F9223222BC000659C4E /* FortuneUTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75F9123222BC000659C4E /* FortuneUTests.m */; };
+		A5E75F9D23222BC000659C4E /* FortuneUUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75F9C23222BC000659C4E /* FortuneUUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5E75F8E23222BC000659C4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5E75F6D23222BBE00659C4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5E75F7423222BBE00659C4E;
+			remoteInfo = FortuneU;
+		};
+		A5E75F9923222BC000659C4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5E75F6D23222BBE00659C4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5E75F7423222BBE00659C4E;
+			remoteInfo = FortuneU;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5E75F7523222BBE00659C4E /* FortuneU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortuneU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E75F7823222BBE00659C4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A5E75F7923222BBE00659C4E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A5E75F7B23222BBE00659C4E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A5E75F7C23222BBE00659C4E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A5E75F7F23222BBE00659C4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5E75F8123222BC000659C4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5E75F8423222BC000659C4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5E75F8623222BC000659C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5E75F8723222BC000659C4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5E75F8D23222BC000659C4E /* FortuneUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortuneUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E75F9123222BC000659C4E /* FortuneUTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FortuneUTests.m; sourceTree = "<group>"; };
+		A5E75F9323222BC000659C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5E75F9823222BC000659C4E /* FortuneUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortuneUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E75F9C23222BC000659C4E /* FortuneUUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FortuneUUITests.m; sourceTree = "<group>"; };
+		A5E75F9E23222BC000659C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5E75F7223222BBE00659C4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E75F8A23222BC000659C4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E75F9523222BC000659C4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5E75F6C23222BBE00659C4E = {
+			isa = PBXGroup;
+			children = (
+				A5E75F7723222BBE00659C4E /* FortuneU */,
+				A5E75F9023222BC000659C4E /* FortuneUTests */,
+				A5E75F9B23222BC000659C4E /* FortuneUUITests */,
+				A5E75F7623222BBE00659C4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5E75F7623222BBE00659C4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5E75F7523222BBE00659C4E /* FortuneU.app */,
+				A5E75F8D23222BC000659C4E /* FortuneUTests.xctest */,
+				A5E75F9823222BC000659C4E /* FortuneUUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5E75F7723222BBE00659C4E /* FortuneU */ = {
+			isa = PBXGroup;
+			children = (
+				A5E75F7823222BBE00659C4E /* AppDelegate.h */,
+				A5E75F7923222BBE00659C4E /* AppDelegate.m */,
+				A5E75F7B23222BBE00659C4E /* ViewController.h */,
+				A5E75F7C23222BBE00659C4E /* ViewController.m */,
+				A5E75F7E23222BBE00659C4E /* Main.storyboard */,
+				A5E75F8123222BC000659C4E /* Assets.xcassets */,
+				A5E75F8323222BC000659C4E /* LaunchScreen.storyboard */,
+				A5E75F8623222BC000659C4E /* Info.plist */,
+				A5E75F8723222BC000659C4E /* main.m */,
+			);
+			path = FortuneU;
+			sourceTree = "<group>";
+		};
+		A5E75F9023222BC000659C4E /* FortuneUTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5E75F9123222BC000659C4E /* FortuneUTests.m */,
+				A5E75F9323222BC000659C4E /* Info.plist */,
+			);
+			path = FortuneUTests;
+			sourceTree = "<group>";
+		};
+		A5E75F9B23222BC000659C4E /* FortuneUUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5E75F9C23222BC000659C4E /* FortuneUUITests.m */,
+				A5E75F9E23222BC000659C4E /* Info.plist */,
+			);
+			path = FortuneUUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5E75F7423222BBE00659C4E /* FortuneU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5E75FA123222BC000659C4E /* Build configuration list for PBXNativeTarget "FortuneU" */;
+			buildPhases = (
+				A5E75F7123222BBE00659C4E /* Sources */,
+				A5E75F7223222BBE00659C4E /* Frameworks */,
+				A5E75F7323222BBE00659C4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FortuneU;
+			productName = FortuneU;
+			productReference = A5E75F7523222BBE00659C4E /* FortuneU.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5E75F8C23222BC000659C4E /* FortuneUTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5E75FA423222BC000659C4E /* Build configuration list for PBXNativeTarget "FortuneUTests" */;
+			buildPhases = (
+				A5E75F8923222BC000659C4E /* Sources */,
+				A5E75F8A23222BC000659C4E /* Frameworks */,
+				A5E75F8B23222BC000659C4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5E75F8F23222BC000659C4E /* PBXTargetDependency */,
+			);
+			name = FortuneUTests;
+			productName = FortuneUTests;
+			productReference = A5E75F8D23222BC000659C4E /* FortuneUTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A5E75F9723222BC000659C4E /* FortuneUUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5E75FA723222BC000659C4E /* Build configuration list for PBXNativeTarget "FortuneUUITests" */;
+			buildPhases = (
+				A5E75F9423222BC000659C4E /* Sources */,
+				A5E75F9523222BC000659C4E /* Frameworks */,
+				A5E75F9623222BC000659C4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5E75F9A23222BC000659C4E /* PBXTargetDependency */,
+			);
+			name = FortuneUUITests;
+			productName = FortuneUUITests;
+			productReference = A5E75F9823222BC000659C4E /* FortuneUUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5E75F6D23222BBE00659C4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = User;
+				TargetAttributes = {
+					A5E75F7423222BBE00659C4E = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					A5E75F8C23222BC000659C4E = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = A5E75F7423222BBE00659C4E;
+					};
+					A5E75F9723222BC000659C4E = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = A5E75F7423222BBE00659C4E;
+					};
+				};
+			};
+			buildConfigurationList = A5E75F7023222BBE00659C4E /* Build configuration list for PBXProject "FortuneU" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5E75F6C23222BBE00659C4E;
+			productRefGroup = A5E75F7623222BBE00659C4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5E75F7423222BBE00659C4E /* FortuneU */,
+				A5E75F8C23222BC000659C4E /* FortuneUTests */,
+				A5E75F9723222BC000659C4E /* FortuneUUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5E75F7323222BBE00659C4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E75F8523222BC000659C4E /* LaunchScreen.storyboard in Resources */,
+				A5E75F8223222BC000659C4E /* Assets.xcassets in Resources */,
+				A5E75F8023222BBE00659C4E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E75F8B23222BC000659C4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E75F9623222BC000659C4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5E75F7123222BBE00659C4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E75F7D23222BBE00659C4E /* ViewController.m in Sources */,
+				A5E75F8823222BC000659C4E /* main.m in Sources */,
+				A5E75F7A23222BBE00659C4E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E75F8923222BC000659C4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E75F9223222BC000659C4E /* FortuneUTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E75F9423222BC000659C4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E75F9D23222BC000659C4E /* FortuneUUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5E75F8F23222BC000659C4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5E75F7423222BBE00659C4E /* FortuneU */;
+			targetProxy = A5E75F8E23222BC000659C4E /* PBXContainerItemProxy */;
+		};
+		A5E75F9A23222BC000659C4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5E75F7423222BBE00659C4E /* FortuneU */;
+			targetProxy = A5E75F9923222BC000659C4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5E75F7E23222BBE00659C4E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5E75F7F23222BBE00659C4E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5E75F8323222BC000659C4E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5E75F8423222BC000659C4E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5E75F9F23222BC000659C4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A5E75FA023222BC000659C4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5E75FA223222BC000659C4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GG765643Z3;
+				INFOPLIST_FILE = FortuneU/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.FortuneU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5E75FA323222BC000659C4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GG765643Z3;
+				INFOPLIST_FILE = FortuneU/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.FortuneU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A5E75FA523222BC000659C4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GG765643Z3;
+				INFOPLIST_FILE = FortuneUTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.FortuneUTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FortuneU.app/FortuneU";
+			};
+			name = Debug;
+		};
+		A5E75FA623222BC000659C4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GG765643Z3;
+				INFOPLIST_FILE = FortuneUTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.FortuneUTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FortuneU.app/FortuneU";
+			};
+			name = Release;
+		};
+		A5E75FA823222BC000659C4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GG765643Z3;
+				INFOPLIST_FILE = FortuneUUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.FortuneUUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FortuneU;
+			};
+			name = Debug;
+		};
+		A5E75FA923222BC000659C4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GG765643Z3;
+				INFOPLIST_FILE = FortuneUUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bestapp.FortuneUUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FortuneU;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5E75F7023222BBE00659C4E /* Build configuration list for PBXProject "FortuneU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5E75F9F23222BC000659C4E /* Debug */,
+				A5E75FA023222BC000659C4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5E75FA123222BC000659C4E /* Build configuration list for PBXNativeTarget "FortuneU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5E75FA223222BC000659C4E /* Debug */,
+				A5E75FA323222BC000659C4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5E75FA423222BC000659C4E /* Build configuration list for PBXNativeTarget "FortuneUTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5E75FA523222BC000659C4E /* Debug */,
+				A5E75FA623222BC000659C4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5E75FA723222BC000659C4E /* Build configuration list for PBXNativeTarget "FortuneUUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5E75FA823222BC000659C4E /* Debug */,
+				A5E75FA923222BC000659C4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5E75F6D23222BBE00659C4E /* Project object */;
+}
