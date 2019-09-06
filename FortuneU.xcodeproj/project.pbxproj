@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DF56A41850FBDDF8AE5C32B /* Pods_FortuneUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5E13861E5ED9A5B0D9FC12 /* Pods_FortuneUUITests.framework */; };
 		A5E75F7A23222BBE00659C4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75F7923222BBE00659C4E /* AppDelegate.m */; };
 		A5E75F7D23222BBE00659C4E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75F7C23222BBE00659C4E /* ViewController.m */; };
 		A5E75F8023222BBE00659C4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E75F7E23222BBE00659C4E /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		A5E75F8823222BC000659C4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75F8723222BC000659C4E /* main.m */; };
 		A5E75F9223222BC000659C4E /* FortuneUTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75F9123222BC000659C4E /* FortuneUTests.m */; };
 		A5E75F9D23222BC000659C4E /* FortuneUUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75F9C23222BC000659C4E /* FortuneUUITests.m */; };
+		B9FBBACC00A5C679596EA5D2 /* Pods_FortuneUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994CDDE91AFE183FBEFD7B1B /* Pods_FortuneUTests.framework */; };
+		F3E4575B5EA0AFA8431C4C67 /* Pods_FortuneU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FA83BDDD5DBFA5E01DFABA /* Pods_FortuneU.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22C78E78C42B2D74FC26642F /* Pods-FortuneU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortuneU.release.xcconfig"; path = "Target Support Files/Pods-FortuneU/Pods-FortuneU.release.xcconfig"; sourceTree = "<group>"; };
+		41E3E2183CE8EE1824466250 /* Pods-FortuneUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortuneUTests.debug.xcconfig"; path = "Target Support Files/Pods-FortuneUTests/Pods-FortuneUTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C5E13861E5ED9A5B0D9FC12 /* Pods_FortuneUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FortuneUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64FA83BDDD5DBFA5E01DFABA /* Pods_FortuneU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FortuneU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		994CDDE91AFE183FBEFD7B1B /* Pods_FortuneUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FortuneUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E75F7523222BBE00659C4E /* FortuneU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FortuneU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E75F7823222BBE00659C4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A5E75F7923222BBE00659C4E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +59,10 @@
 		A5E75F9823222BC000659C4E /* FortuneUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FortuneUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E75F9C23222BC000659C4E /* FortuneUUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FortuneUUITests.m; sourceTree = "<group>"; };
 		A5E75F9E23222BC000659C4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF29D7E80675457B500DDB9D /* Pods-FortuneUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortuneUTests.release.xcconfig"; path = "Target Support Files/Pods-FortuneUTests/Pods-FortuneUTests.release.xcconfig"; sourceTree = "<group>"; };
+		C54ABF21AE35728F99EA02E0 /* Pods-FortuneU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortuneU.debug.xcconfig"; path = "Target Support Files/Pods-FortuneU/Pods-FortuneU.debug.xcconfig"; sourceTree = "<group>"; };
+		DE60A79FF4D3BDCA31263F5A /* Pods-FortuneUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortuneUUITests.release.xcconfig"; path = "Target Support Files/Pods-FortuneUUITests/Pods-FortuneUUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E0529559FF92374C6101DD52 /* Pods-FortuneUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortuneUUITests.debug.xcconfig"; path = "Target Support Files/Pods-FortuneUUITests/Pods-FortuneUUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E4575B5EA0AFA8431C4C67 /* Pods_FortuneU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9FBBACC00A5C679596EA5D2 /* Pods_FortuneUTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +86,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF56A41850FBDDF8AE5C32B /* Pods_FortuneUUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44B2E07084741CA71369EF1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C54ABF21AE35728F99EA02E0 /* Pods-FortuneU.debug.xcconfig */,
+				22C78E78C42B2D74FC26642F /* Pods-FortuneU.release.xcconfig */,
+				41E3E2183CE8EE1824466250 /* Pods-FortuneUTests.debug.xcconfig */,
+				BF29D7E80675457B500DDB9D /* Pods-FortuneUTests.release.xcconfig */,
+				E0529559FF92374C6101DD52 /* Pods-FortuneUUITests.debug.xcconfig */,
+				DE60A79FF4D3BDCA31263F5A /* Pods-FortuneUUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A5E75F6C23222BBE00659C4E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +114,8 @@
 				A5E75F9023222BC000659C4E /* FortuneUTests */,
 				A5E75F9B23222BC000659C4E /* FortuneUUITests */,
 				A5E75F7623222BBE00659C4E /* Products */,
+				44B2E07084741CA71369EF1A /* Pods */,
+				AEF21EF086460655367C4279 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +163,16 @@
 			path = FortuneUUITests;
 			sourceTree = "<group>";
 		};
+		AEF21EF086460655367C4279 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64FA83BDDD5DBFA5E01DFABA /* Pods_FortuneU.framework */,
+				994CDDE91AFE183FBEFD7B1B /* Pods_FortuneUTests.framework */,
+				4C5E13861E5ED9A5B0D9FC12 /* Pods_FortuneUUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5E75FA123222BC000659C4E /* Build configuration list for PBXNativeTarget "FortuneU" */;
 			buildPhases = (
+				A483C29D7609800D7CDDA9D4 /* [CP] Check Pods Manifest.lock */,
 				A5E75F7123222BBE00659C4E /* Sources */,
 				A5E75F7223222BBE00659C4E /* Frameworks */,
 				A5E75F7323222BBE00659C4E /* Resources */,
+				501528DF3857562E198F867A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5E75FA423222BC000659C4E /* Build configuration list for PBXNativeTarget "FortuneUTests" */;
 			buildPhases = (
+				4F3EC924661A14F4CC6281A8 /* [CP] Check Pods Manifest.lock */,
 				A5E75F8923222BC000659C4E /* Sources */,
 				A5E75F8A23222BC000659C4E /* Frameworks */,
 				A5E75F8B23222BC000659C4E /* Resources */,
@@ -174,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5E75FA723222BC000659C4E /* Build configuration list for PBXNativeTarget "FortuneUUITests" */;
 			buildPhases = (
+				860A26B0C8A5AFABE607E2E3 /* [CP] Check Pods Manifest.lock */,
 				A5E75F9423222BC000659C4E /* Sources */,
 				A5E75F9523222BC000659C4E /* Frameworks */,
 				A5E75F9623222BC000659C4E /* Resources */,
@@ -256,6 +301,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F3EC924661A14F4CC6281A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FortuneUTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		501528DF3857562E198F867A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FortuneU/Pods-FortuneU-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FortuneU/Pods-FortuneU-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FortuneU/Pods-FortuneU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		860A26B0C8A5AFABE607E2E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FortuneUUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A483C29D7609800D7CDDA9D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FortuneU-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A5E75F7123222BBE00659C4E /* Sources */ = {
@@ -433,6 +564,7 @@
 		};
 		A5E75FA223222BC000659C4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54ABF21AE35728F99EA02E0 /* Pods-FortuneU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +582,7 @@
 		};
 		A5E75FA323222BC000659C4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22C78E78C42B2D74FC26642F /* Pods-FortuneU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -467,6 +600,7 @@
 		};
 		A5E75FA523222BC000659C4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41E3E2183CE8EE1824466250 /* Pods-FortuneUTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +620,7 @@
 		};
 		A5E75FA623222BC000659C4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF29D7E80675457B500DDB9D /* Pods-FortuneUTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +640,7 @@
 		};
 		A5E75FA823222BC000659C4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0529559FF92374C6101DD52 /* Pods-FortuneUUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GG765643Z3;
@@ -523,6 +659,7 @@
 		};
 		A5E75FA923222BC000659C4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE60A79FF4D3BDCA31263F5A /* Pods-FortuneUUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GG765643Z3;

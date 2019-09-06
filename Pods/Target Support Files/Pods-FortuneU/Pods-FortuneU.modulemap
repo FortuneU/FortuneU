@@ -1,0 +1,6 @@
+framework module Pods_FortuneU {
+  umbrella header "Pods-FortuneU-umbrella.h"
+
+  export *
+  module * { export * }
+}
