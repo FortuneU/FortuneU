@@ -9,6 +9,9 @@
 #import "PostViewController.h"
 
 @interface PostViewController ()
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentCtrl;
+@property (weak, nonatomic) IBOutlet UIView *postExpenseView;
+@property (weak, nonatomic) IBOutlet UIView *postIncomeView;
 
 @end
 
@@ -17,6 +20,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    /*
+    CGFloat width = [UIScreen mainScreen].bounds.size.width * 0.4;
+    [self.segmentCtrl setWidth:width forSegmentAtIndex:0];
+    [self.segmentCtrl setWidth:width forSegmentAtIndex:1];
+    //self.segmentctrl.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.segmentCtrl.layer.borderWidth = 2.0f;
+    self.segmentCtrl.layer.cornerRadius = 8;
+    self.segmentCtrl.clipsToBounds = true;
+     */
+    
+}
+- (IBAction)onSwitchSegment:(id)sender {
+    if (self.segmentCtrl.selectedSegmentIndex == 0) {
+        self.postExpenseView.alpha = 0;
+        self.postIncomeView.alpha = 1;
+    } else {
+        self.postExpenseView.alpha = 1;
+        self.postIncomeView.alpha = 0;
+    }
 }
 
 /*
