@@ -60,7 +60,7 @@
                         <outlet property="passwordField" destination="WwZ-II-oTM" id="8M7-1N-Zj8"/>
                         <outlet property="usernameField" destination="uDQ-Qs-pMd" id="3Xo-X8-tiH"/>
                         <segue destination="Asz-Do-oUT" kind="presentation" identifier="loginsignup" id="55x-RO-EJa"/>
-                        <segue destination="Nxz-bW-fur" kind="presentation" identifier="gethome" id="Qdo-e1-CSf"/>
+                        <segue destination="Nxz-bW-fur" kind="presentation" identifier="gethome" id="Ikr-sK-dF1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -241,7 +241,7 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="1165" y="960"/>
+            <point key="canvasLocation" x="558" y="945"/>
         </scene>
         <!--Item-->
         <scene sceneID="P8a-0t-Efq">
