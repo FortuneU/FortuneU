@@ -18,6 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (IBAction)onTapPlusButton:(id)sender {
+    [self performSegueWithIdentifier:@"compose" sender:nil];
+}
 
 /*
 #pragma mark - Navigation

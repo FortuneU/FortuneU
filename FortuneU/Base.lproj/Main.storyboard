@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="813" y="108"/>
         </scene>
-        <!--View Controller-->
+        <!--Target View Controller-->
         <scene sceneID="Hud-qu-h8Z">
             <objects>
-                <viewController id="V5s-DI-Z4Z" sceneMemberID="viewController">
+                <viewController id="V5s-DI-Z4Z" customClass="TargetViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8eq-Bs-6XK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,21 +173,53 @@
             </objects>
             <point key="canvasLocation" x="517" y="2616"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="d9h-W8-aha">
             <objects>
-                <viewController id="l7L-lU-QGB" sceneMemberID="viewController">
+                <viewController id="l7L-lU-QGB" customClass="RecordViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xku-30-uH3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zW-L8-XK0">
+                                <rect key="frame" x="176.5" y="427" width="61" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="PLUS"/>
+                                <connections>
+                                    <action selector="onTapPlusButton:" destination="l7L-lU-QGB" eventType="touchUpInside" id="iCQ-0R-DrE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2zW-L8-XK0" firstAttribute="centerX" secondItem="Xku-30-uH3" secondAttribute="centerX" id="9Ie-X5-v5X"/>
+                            <constraint firstItem="2zW-L8-XK0" firstAttribute="centerY" secondItem="Xku-30-uH3" secondAttribute="centerY" id="hnK-cI-RnA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Et1-Ya-chd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ASW-Qe-9Mn"/>
+                    <navigationItem key="navigationItem" title="Home" id="ASW-Qe-9Mn"/>
+                    <connections>
+                        <segue destination="SI5-6W-xcO" kind="presentation" identifier="compose" id="pZU-u7-9F7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEp-cr-o5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1467" y="2616"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yJd-AI-Crq">
+            <objects>
+                <viewController id="SI5-6W-xcO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uXR-yc-65Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="x6P-LX-Su4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4z-jR-uIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1467" y="3518"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Xxo-EV-S4n">
