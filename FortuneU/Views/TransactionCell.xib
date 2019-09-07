@@ -20,45 +20,45 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6K6-up-Etk">
-                        <rect key="frame" x="94" y="0.0" width="2" height="53.5"/>
+                        <rect key="frame" x="79" y="0.0" width="2" height="53.5"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="2" id="rmF-FO-uH5"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEb-pW-pif">
-                        <rect key="frame" x="94" y="87.5" width="2" height="53"/>
+                        <rect key="frame" x="79" y="87.5" width="2" height="53"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="2" id="aso-N7-ToV"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food_l" translatesAutoresizingMaskIntoConstraints="NO" id="pbJ-xp-BO8">
-                        <rect key="frame" x="112" y="65.5" width="190" height="10"/>
+                        <rect key="frame" x="97" y="65.5" width="261.00000000000023" height="10"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="MBp-Wd-RLz"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09/04 Sun 18:26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaC-5X-QR1">
-                        <rect key="frame" x="159.5" y="42.5" width="95" height="15"/>
+                        <rect key="frame" x="162.5" y="42.5" width="130.5" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjV-Kf-bTN">
-                        <rect key="frame" x="322" y="38" width="45" height="22"/>
+                        <rect key="frame" x="378" y="38" width="45" height="22"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-D6-VQ6">
-                        <rect key="frame" x="322" y="81" width="48" height="21"/>
+                        <rect key="frame" x="378" y="81" width="48" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Food" translatesAutoresizingMaskIntoConstraints="NO" id="278-KC-haY">
-                        <rect key="frame" x="80" y="55.5" width="30" height="30"/>
+                        <rect key="frame" x="65" y="55.5" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="lQA-VB-q3z"/>
                             <constraint firstAttribute="height" constant="30" id="zU6-Bq-D3i"/>
@@ -76,7 +76,7 @@
                     <constraint firstItem="pbJ-xp-BO8" firstAttribute="centerY" secondItem="278-KC-haY" secondAttribute="centerY" id="VEq-aE-Kbe"/>
                     <constraint firstItem="tjV-Kf-bTN" firstAttribute="leading" secondItem="pbJ-xp-BO8" secondAttribute="trailing" constant="20" id="YDb-xx-nBx"/>
                     <constraint firstItem="278-KC-haY" firstAttribute="top" secondItem="6K6-up-Etk" secondAttribute="bottom" constant="2" id="YuO-T8-jov"/>
-                    <constraint firstItem="278-KC-haY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="n2a-lH-K6T"/>
+                    <constraint firstItem="278-KC-haY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="65" id="n2a-lH-K6T"/>
                     <constraint firstItem="pbJ-xp-BO8" firstAttribute="width" secondItem="GaC-5X-QR1" secondAttribute="width" multiplier="2" id="pD1-oP-pLf"/>
                     <constraint firstItem="278-KC-haY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rwj-Ld-DsD"/>
                     <constraint firstItem="dVM-D6-VQ6" firstAttribute="leading" secondItem="tjV-Kf-bTN" secondAttribute="leading" id="tAk-EO-JyZ"/>
