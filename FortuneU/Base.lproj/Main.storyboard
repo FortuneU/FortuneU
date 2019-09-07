@@ -203,10 +203,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zW-L8-XK0">
-                                <rect key="frame" x="176.5" y="427" width="61" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="PLUS"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zW-L8-XK0">
+                                <rect key="frame" x="182" y="108" width="50" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2zW-L8-XK0" secondAttribute="height" multiplier="19:27" id="Cg3-IJ-rAg"/>
+                                    <constraint firstAttribute="width" constant="50" id="r18-nt-Er7"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
                                 <connections>
                                     <action selector="onTapPlusButton:" destination="l7L-lU-QGB" eventType="touchUpInside" id="iCQ-0R-DrE"/>
                                 </connections>
@@ -214,8 +217,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2zW-L8-XK0" firstAttribute="centerX" secondItem="Xku-30-uH3" secondAttribute="centerX" id="9Ie-X5-v5X"/>
-                            <constraint firstItem="2zW-L8-XK0" firstAttribute="centerY" secondItem="Xku-30-uH3" secondAttribute="centerY" id="hnK-cI-RnA"/>
+                            <constraint firstItem="2zW-L8-XK0" firstAttribute="top" secondItem="Et1-Ya-chd" secondAttribute="top" constant="20" id="LoF-vN-axk"/>
+                            <constraint firstItem="2zW-L8-XK0" firstAttribute="centerX" secondItem="Xku-30-uH3" secondAttribute="centerX" id="h32-eX-0Hx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Et1-Ya-chd"/>
                     </view>
@@ -834,6 +837,7 @@
         <image name="Other_n" width="225" height="225"/>
         <image name="Record" width="31" height="30"/>
         <image name="Transport_n" width="225" height="225"/>
+        <image name="add" width="380" height="540"/>
         <image name="logo1" width="802" height="316"/>
     </resources>
 </document>
