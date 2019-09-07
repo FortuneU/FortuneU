@@ -28,6 +28,7 @@
     self.idLabel.text = [NSString stringWithFormat:@"ID:%@", me.objectId];
     NSNumber *lv = me[@"level"];
     self.lvLabel.text = [NSString stringWithFormat:@"LV%d", [lv intValue] ];
+    self.navigationItem.title = me.username;
 }
 - (IBAction)onEditProfile:(id)sender {
 }
