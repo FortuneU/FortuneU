@@ -22,6 +22,7 @@
     // Do any additional setup after loading the view.
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.rowHeight = 80;
     [self getTransactions];
 }
 - (IBAction)onTapPlusButton:(id)sender {
@@ -79,7 +80,7 @@
     TransactionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell"];
     
     if (!cell) {
-        [tableView registerNib:[UINib nibWithNibName:@"TransactionCellView" bundle:nil] forCellReuseIdentifier:@"TransactionCell"];
+        [tableView registerNib:[UINib nibWithNibName:@"TransactionCell" bundle:nil] forCellReuseIdentifier:@"TransactionCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"TransactionCell"];
     }
     
