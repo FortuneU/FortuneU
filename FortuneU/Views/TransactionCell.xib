@@ -41,7 +41,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09/04 Sun 18:26" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaC-5X-QR1">
-                        <rect key="frame" x="103" y="52" width="88" height="13.5"/>
+                        <rect key="frame" x="101" y="52" width="88" height="13.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -82,7 +82,7 @@
                     <constraint firstItem="278-KC-haY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rwj-Ld-DsD"/>
                     <constraint firstItem="dVM-D6-VQ6" firstAttribute="leading" secondItem="tjV-Kf-bTN" secondAttribute="leading" id="tAk-EO-JyZ"/>
                     <constraint firstItem="278-KC-haY" firstAttribute="centerX" secondItem="6K6-up-Etk" secondAttribute="centerX" id="u5q-zQ-8T4"/>
-                    <constraint firstItem="pbJ-xp-BO8" firstAttribute="centerX" secondItem="GaC-5X-QR1" secondAttribute="centerX" id="w3h-4W-JuK"/>
+                    <constraint firstItem="pbJ-xp-BO8" firstAttribute="centerX" secondItem="GaC-5X-QR1" secondAttribute="centerX" constant="2" id="w3h-4W-JuK"/>
                     <constraint firstItem="6K6-up-Etk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wjP-3o-H7g"/>
                     <constraint firstAttribute="bottom" secondItem="WEb-pW-pif" secondAttribute="bottom" id="z23-Jf-jAb"/>
                 </constraints>
