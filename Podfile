@@ -7,6 +7,11 @@ target 'FortuneU' do
 
   # Pods for FortuneU
   pod 'Parse'
+  pod 'AFNetworking'
+  pod 'IQKeyboardManager'
+  pod 'DateTools'
+  pod 'UITextView+Placeholder'
+  pod 'MBProgressHUD'
 
   target 'FortuneUTests' do
     inherit! :search_paths

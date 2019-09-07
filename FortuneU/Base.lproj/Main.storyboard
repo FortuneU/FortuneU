@@ -498,9 +498,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onSave:" destination="AN9-7i-k2z" eventType="touchUpInside" id="nwG-JG-PNF"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="amount" destination="8wi-s8-WGO" id="VvX-Et-nlS"/>
+                        <outlet property="amountField" destination="8wi-s8-WGO" id="l4i-A4-Eb8"/>
+                        <outlet property="datePicker" destination="gf0-PC-BtX" id="0WQ-d8-EpJ"/>
+                        <outlet property="memoField" destination="6iL-Ou-hoJ" id="JIg-Xq-osa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XB8-1o-6Ab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

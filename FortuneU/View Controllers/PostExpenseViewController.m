@@ -7,8 +7,13 @@
 //
 
 #import "PostExpenseViewController.h"
+#import "Transaction.h"
 
 @interface PostExpenseViewController ()
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UITextField *amountField;
+@property (weak, nonatomic) IBOutlet UITextField *memoField;
+
 
 @end
 
@@ -21,6 +26,22 @@
 
 - (IBAction)onClickCancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (IBAction)onSave:(id)sender {
+    //get category name
+    
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber *amount = [f numberFromString:self.amountField.text];
+    
+    
+    
+    [Transaction postTransactionWithAmount:amount withType:<#(NSString * _Nullable)#> withDate:self._datePicker.date withMemo:self.memoField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+        
+    }];
+    
 }
 
 /*
