@@ -9,10 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "PostViewController.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PostExpenseViewController : UIViewController <SaveTransactionDelegate>
 
+@protocol UpdateTransactionDelegate;
+
+
+@interface PostExpenseViewController : UIViewController <SaveTransactionDelegate>
+@property (nonatomic, strong) id<UpdateTransactionDelegate> delegate2;
+
+@end
+
+@protocol UpdateTransactionDelegate
+-(void)updateRecord;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,6 +10,8 @@
 #import "Transaction.h"
 #import "PostViewController.h"
 
+
+
 @interface PostExpenseViewController () 
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UITextField *amountField;
@@ -29,7 +31,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *housingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *clothingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *otherLabel;
-
 
 
 @end
@@ -146,7 +147,8 @@
             }];
             
         } else {
-            
+            [self.delegate2 updateRecord];
+            [self dismissViewControllerAnimated:YES completion: ^{[self.delegate2 updateRecord];}];
         }
         
     }];

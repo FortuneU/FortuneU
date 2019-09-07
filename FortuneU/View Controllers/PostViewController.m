@@ -53,7 +53,8 @@
 
 - (IBAction)onSave:(id)sender {
     [self.delegate onTapSave];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
 }
 
 
@@ -67,9 +68,12 @@
     if ([[segue identifier] isEqualToString:@"income"]) {
         PostIncomeViewController *vc = (PostIncomeViewController*) [segue destinationViewController];
         self.delegate = vc;
+        
     } else if ([[segue identifier] isEqualToString:@"expense"]){
         PostExpenseViewController *vc = (PostExpenseViewController*) [segue destinationViewController];
         self.delegate = vc;
+        vc.delegate2 = self.pre;
+        
     }
 }
 

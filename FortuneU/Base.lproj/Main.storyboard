@@ -551,7 +551,7 @@
         <!--Post Expense View Controller-->
         <scene sceneID="uun-52-t9B">
             <objects>
-                <viewController id="AN9-7i-k2z" customClass="PostExpenseViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="postexpense" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AN9-7i-k2z" customClass="PostExpenseViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wIC-Gn-hlu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

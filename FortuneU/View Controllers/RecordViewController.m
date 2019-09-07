@@ -9,6 +9,7 @@
 #import "RecordViewController.h"
 #import "TransactionCell.h"
 #import "Transaction.h"
+#import "PostViewController.h"
 
 @interface RecordViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -23,10 +24,12 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.rowHeight = 80;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self getTransactions];
 }
 - (IBAction)onTapPlusButton:(id)sender {
     [self performSegueWithIdentifier:@"compose" sender:nil];
+    
 }
 
 - (void) getTransactions {
@@ -123,15 +126,32 @@
     return dateString;
 }
 
-/*
+
+
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
+     if ([[segue identifier] isEqualToString:@"compose"]) {
+         UINavigationController *nvc = (UINavigationController*) [segue destinationViewController];
+         PostViewController *vc = (PostViewController*) nvc.topViewController;
+         vc.pre = self;
+         //PostExpenseViewController *vce = [self.storyboard instantiateViewControllerWithIdentifier:@"postexpense"];
+         //vce.delegate2 = self;
+     }
  }
- */
+
+
+
+
+
+- (void)updateRecord {
+    [self getTransactions];
+    //[self.tableView reloadData];
+}
+
 
 
 @end
