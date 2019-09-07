@@ -20,7 +20,7 @@
 }
 
 - (IBAction)onClickCancel:(id)sender {
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

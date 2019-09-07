@@ -15,12 +15,13 @@
 @dynamic amount;
 @dynamic type;
 @dynamic date;
+@dynamic memo;
 
 +(nonnull NSString*) parseClassName {
     return @"Transaction";
 }
 
-+ (void) postTransactionWithAmount: (NSNumber * _Nullable) amount withType: (NSString * _Nullable )type withDate:(NSDate * _Nullable)date withCompletion: (PFBooleanResultBlock _Nullable) completion{
++ (void) postTransactionWithAmount: (NSNumber * _Nullable) amount withType: (NSString * _Nullable )type withDate:(NSDate * _Nullable)date withMemo:(NSString * _Nullable)memo withCompletion: (PFBooleanResultBlock _Nullable) completion{
     Transaction *newTransaction = [Transaction new];
     newTransaction.user = [PFUser currentUser];
     newTransaction.amount = amount;
