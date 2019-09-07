@@ -405,6 +405,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.088908381760120392" green="0.2368493378162384" blue="0.67416602373123169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.088908381760120392" green="0.2368493378162384" blue="0.67416602373123169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="040-Uy-GDX" kind="relationship" relationship="viewControllers" id="5gY-n4-h1t"/>
@@ -421,7 +427,7 @@
         <scene sceneID="P8a-0t-Efq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GOx-fX-ZDR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Record" id="kPD-MD-OCW"/>
+                    <tabBarItem key="tabBarItem" title="Record" image="Record" id="kPD-MD-OCW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6jc-cU-n4Z">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -781,7 +787,7 @@
         <scene sceneID="b1e-OT-k7K">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mKS-g2-lyt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Analysis" id="AQg-7N-5Ds"/>
+                    <tabBarItem key="tabBarItem" title="Analysis" image="Analysis" id="AQg-7N-5Ds"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YgO-mV-riT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -800,7 +806,7 @@
         <scene sceneID="H9Y-w0-bgQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IDp-1O-3ZZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Community" id="7yI-Kr-biV"/>
+                    <tabBarItem key="tabBarItem" title="Community" image="Community" id="7yI-Kr-biV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BMI-Sf-Ebo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -818,12 +824,15 @@
     </scenes>
     <resources>
         <image name="Add_n" width="225" height="225"/>
+        <image name="Analysis" width="34" height="30"/>
         <image name="Clothing_n" width="225" height="225"/>
+        <image name="Community" width="61" height="35"/>
         <image name="Education_n" width="225" height="225"/>
         <image name="Food_n" width="225" height="225"/>
-        <image name="Goal" width="40" height="40"/>
+        <image name="Goal" width="33" height="30"/>
         <image name="Housing_n" width="225" height="225"/>
         <image name="Other_n" width="225" height="225"/>
+        <image name="Record" width="31" height="30"/>
         <image name="Transport_n" width="225" height="225"/>
         <image name="logo1" width="802" height="316"/>
     </resources>
