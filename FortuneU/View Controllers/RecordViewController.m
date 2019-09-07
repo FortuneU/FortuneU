@@ -92,13 +92,13 @@
     
     //get icon view according to category
     NSDictionary *iconDict = @{@"Food":@"Food.png",@"Transportation":@"Transport.png", @"Education":@"Education.png", @"Clothing":@"Clothing.png",@"Housing":@"Housing.png",@"Other":@"Other.png",
-                               @"Salary":@"salary.png", @"Scholarship":@"scholarship.png", @"Reimbursement":@"reimburse.png", @"Investment":@"invest.png",@"OtherI":@"otheri.png"
+                               @"Salary":@"salary.png", @"Scholarship":@"scholarship.png", @"Reimbursement":@"reimburse.png", @"Investment":@"invest.png",@"OtherI":@"otheri.png",@"Save":@"piggy.png"
                                };
     [cell.typeImageView setImage:[UIImage imageNamed:[iconDict objectForKey:category]]];
     
     //get line view according to category
     NSDictionary *lineDict = @{@"Food":@"food_l.png",@"Transportation":@"transport_l.png", @"Education":@"education_l.png", @"Clothing":@"clothing_l.png",@"Housing":@"housing_l.png",@"Other":@"other_l.png",
-                               @"Salary":@"salary_l.png", @"Scholarship":@"scholarship_l.png",@"Reimbursement":@"reimbursement_l.png", @"Investment":@"invest_l.png", @"OtherI":@"otheri_l.png"
+                               @"Salary":@"salary_l.png", @"Scholarship":@"scholarship_l.png",@"Reimbursement":@"reimbursement_l.png", @"Investment":@"invest_l.png", @"OtherI":@"otheri_l.png",@"Save":@"save_l.png"
                                };
     [cell.lineImageView setImage:[UIImage imageNamed:[lineDict objectForKey:category]]];
     

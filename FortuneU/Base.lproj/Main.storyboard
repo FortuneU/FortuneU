@@ -433,7 +433,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="efl-zN-Ezz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wL8-j0-gUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="Authenticated" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nxz-bW-fur" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lK8-Po-Wrv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -454,6 +453,7 @@
                         <segue destination="MsK-bA-Dng" kind="relationship" relationship="viewControllers" id="BLg-2X-30U"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wL8-j0-gUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="558" y="945"/>
         </scene>
@@ -754,6 +754,7 @@
                             <constraint firstItem="8Ov-BL-9MZ" firstAttribute="centerX" secondItem="RZW-y2-kWd" secondAttribute="centerX" multiplier="0.3" id="vWj-yg-3gR"/>
                             <constraint firstItem="Anh-lF-MZA" firstAttribute="centerX" secondItem="b2Z-ea-wfd" secondAttribute="centerX" id="xTG-uu-w8h"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="W1g-Qz-qBd"/>
                     </view>
                     <navigationItem key="navigationItem" id="7XO-Ac-TnJ"/>
                     <connections>
@@ -1010,6 +1011,7 @@
                             <constraint firstItem="OIC-nA-TCF" firstAttribute="top" secondItem="8wi-s8-WGO" secondAttribute="bottom" constant="40" id="wFo-9b-iPG"/>
                             <constraint firstAttribute="trailing" secondItem="OIC-nA-TCF" secondAttribute="trailing" constant="20" id="zO7-h6-nai"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="vsi-mP-kmo"/>
                     </view>
                     <navigationItem key="navigationItem" id="w7l-6n-Upv"/>
                     <connections>
@@ -1072,15 +1074,15 @@
             </objects>
             <point key="canvasLocation" x="4048" y="1802"/>
         </scene>
-        <!--View Controller-->
+        <!--Post Save View Controller-->
         <scene sceneID="T45-ci-Tj1">
             <objects>
-                <viewController id="eht-eB-1sB" sceneMemberID="viewController">
+                <viewController id="eht-eB-1sB" customClass="PostSaveViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LIP-B8-Sro">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="CUF-5J-GV1">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="CUF-5J-GV1">
                                 <rect key="frame" x="0.0" y="53" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sLZ-4J-wYI"/>
@@ -1088,6 +1090,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="589509088.76484597">
                                     <!--2019-09-07 00:31:28 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePicker:" destination="xVl-N1-z2x" eventType="valueChanged" id="Q6R-VO-M3X"/>
+                                </connections>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How much do you want to save?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bg-tb-90U">
                                 <rect key="frame" x="70" y="171.5" width="324" height="30"/>
@@ -1113,25 +1118,53 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPa-0d-CzA">
+                                <rect key="frame" x="20" y="241.5" width="374" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Click to add some memo.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNp-em-Isk">
+                                <rect key="frame" x="20" y="269.5" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1bg-tb-90U" firstAttribute="centerY" secondItem="eVn-mq-PUP" secondAttribute="centerY" id="27i-7Q-ayq"/>
+                            <constraint firstItem="oNp-em-Isk" firstAttribute="leading" secondItem="MGJ-WJ-KSq" secondAttribute="leading" constant="20" id="3Nh-FT-4GH"/>
+                            <constraint firstItem="oNp-em-Isk" firstAttribute="top" secondItem="KPa-0d-CzA" secondAttribute="bottom" constant="12" id="55P-0R-ASF"/>
+                            <constraint firstItem="KPa-0d-CzA" firstAttribute="top" secondItem="1bg-tb-90U" secondAttribute="bottom" constant="40" id="6JD-1X-su6"/>
                             <constraint firstItem="fR1-Zw-1az" firstAttribute="leading" secondItem="LIP-B8-Sro" secondAttribute="leading" constant="20" id="7CR-Vg-5Da"/>
                             <constraint firstAttribute="trailing" secondItem="fR1-Zw-1az" secondAttribute="trailing" constant="20" id="Avd-k8-ns6"/>
                             <constraint firstItem="eVn-mq-PUP" firstAttribute="leading" secondItem="fR1-Zw-1az" secondAttribute="leading" id="Bx2-hU-cvO"/>
+                            <constraint firstItem="CUF-5J-GV1" firstAttribute="trailing" secondItem="MGJ-WJ-KSq" secondAttribute="trailing" id="F0z-pQ-SY4"/>
                             <constraint firstItem="bDg-O3-3R8" firstAttribute="top" secondItem="LIP-B8-Sro" secondAttribute="top" constant="30" id="Js4-8C-nXZ"/>
                             <constraint firstItem="CUF-5J-GV1" firstAttribute="top" secondItem="bDg-O3-3R8" secondAttribute="bottom" constant="6" id="LOE-08-8ky"/>
                             <constraint firstItem="1bg-tb-90U" firstAttribute="leading" secondItem="eVn-mq-PUP" secondAttribute="trailing" constant="8" id="OkO-8Q-qsG"/>
+                            <constraint firstItem="oNp-em-Isk" firstAttribute="top" secondItem="KPa-0d-CzA" secondAttribute="bottom" constant="12" id="QQh-QB-uRd"/>
                             <constraint firstAttribute="trailing" secondItem="1bg-tb-90U" secondAttribute="trailing" constant="20" id="RVe-0U-s6K"/>
                             <constraint firstItem="fR1-Zw-1az" firstAttribute="top" secondItem="CUF-5J-GV1" secondAttribute="bottom" constant="35" id="RlR-br-sv4"/>
+                            <constraint firstItem="MGJ-WJ-KSq" firstAttribute="trailing" secondItem="oNp-em-Isk" secondAttribute="trailing" constant="20" id="X3I-tL-TeP"/>
+                            <constraint firstItem="KPa-0d-CzA" firstAttribute="leading" secondItem="MGJ-WJ-KSq" secondAttribute="leading" constant="20" id="Zsp-bg-u1l"/>
                             <constraint firstAttribute="trailing" secondItem="bDg-O3-3R8" secondAttribute="trailing" constant="20" id="eAV-gG-sZr"/>
+                            <constraint firstItem="CUF-5J-GV1" firstAttribute="leading" secondItem="MGJ-WJ-KSq" secondAttribute="leading" id="jYg-ui-Xwc"/>
+                            <constraint firstItem="MGJ-WJ-KSq" firstAttribute="trailing" secondItem="KPa-0d-CzA" secondAttribute="trailing" constant="20" id="oCb-jt-v8e"/>
                             <constraint firstItem="bDg-O3-3R8" firstAttribute="leading" secondItem="LIP-B8-Sro" secondAttribute="leading" constant="20" id="oR5-5W-9oJ"/>
                             <constraint firstItem="eVn-mq-PUP" firstAttribute="top" secondItem="fR1-Zw-1az" secondAttribute="bottom" constant="20" id="pdX-2B-bEw"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="MGJ-WJ-KSq"/>
                     </view>
+                    <connections>
+                        <outlet property="amountField" destination="1bg-tb-90U" id="n7I-5I-py9"/>
+                        <outlet property="datePicker" destination="CUF-5J-GV1" id="U1c-yN-yll"/>
+                        <outlet property="memoField" destination="oNp-em-Isk" id="FPd-OC-gKV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXW-oh-UPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xVl-N1-z2x" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2371.0144927536235" y="5183.7053571428569"/>
         </scene>

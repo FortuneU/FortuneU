@@ -65,8 +65,10 @@
 - (IBAction)onSave:(id)sender {
     if (self.segmentCtrl.selectedSegmentIndex == 0) {
         [self.delegateI onTapSave];
-    } else {
+    } else if (self.segmentCtrl.selectedSegmentIndex == 1){
         [self.delegate onTapSave];
+    } else {
+        [self.delegateS onTapSave];
     }
     
     

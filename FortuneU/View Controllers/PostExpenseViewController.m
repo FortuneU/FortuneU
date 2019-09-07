@@ -122,7 +122,7 @@
         NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
         f.numberStyle = NSNumberFormatterDecimalStyle;
         NSNumber *amount = [f numberFromString:self.amountField.text];
-        //amount = @(-[amount doubleValue]);
+        amount = @(-[amount doubleValue]);
         
         [Transaction postTransactionWithAmount:amount withType:self.category withDate:self.datePicker.date withMemo:self.memoField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
             
