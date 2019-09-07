@@ -37,11 +37,11 @@
     NSNumber *amount = [f numberFromString:self.amountField.text];
     
     
-    
+    /*
     [Transaction postTransactionWithAmount:amount withType:<#(NSString * _Nullable)#> withDate:self._datePicker.date withMemo:self.memoField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
         
     }];
-    
+    */
 }
 
 /*
