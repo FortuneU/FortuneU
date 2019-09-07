@@ -204,7 +204,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zW-L8-XK0">
-                                <rect key="frame" x="40" y="108" width="80" height="113.5"/>
+                                <rect key="frame" x="20" y="108" width="80" height="113.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2zW-L8-XK0" secondAttribute="height" multiplier="19:27" id="Cg3-IJ-rAg"/>
                                     <constraint firstAttribute="width" constant="80" id="r18-nt-Er7"/>
@@ -233,7 +233,7 @@
                         <constraints>
                             <constraint firstItem="keu-S7-ZxK" firstAttribute="top" secondItem="2zW-L8-XK0" secondAttribute="bottom" id="6aU-EJ-SXS"/>
                             <constraint firstItem="keu-S7-ZxK" firstAttribute="bottom" secondItem="Et1-Ya-chd" secondAttribute="bottom" id="7F0-Qt-4P4"/>
-                            <constraint firstItem="2zW-L8-XK0" firstAttribute="leading" secondItem="Et1-Ya-chd" secondAttribute="leading" constant="40" id="Atr-fu-shj"/>
+                            <constraint firstItem="2zW-L8-XK0" firstAttribute="leading" secondItem="Et1-Ya-chd" secondAttribute="leading" constant="20" id="Atr-fu-shj"/>
                             <constraint firstItem="2zW-L8-XK0" firstAttribute="top" secondItem="Et1-Ya-chd" secondAttribute="top" constant="20" id="PLP-zD-qjH"/>
                             <constraint firstItem="keu-S7-ZxK" firstAttribute="leading" secondItem="Et1-Ya-chd" secondAttribute="leading" id="ZGI-hS-20m"/>
                             <constraint firstItem="keu-S7-ZxK" firstAttribute="trailing" secondItem="Et1-Ya-chd" secondAttribute="trailing" id="fzr-7k-Zpw"/>
