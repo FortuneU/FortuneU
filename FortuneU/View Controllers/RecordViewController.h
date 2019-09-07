@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "PostViewController.h"
+
 #import "PostExpenseViewController.h"
+#import "PostIncomeViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RecordViewController : UIViewController <UpdateTransactionDelegate>
+@interface RecordViewController : UIViewController <UpdateTransactionDelegate,UpdateTransactionIDelegate>
 
 
 @end

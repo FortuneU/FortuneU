@@ -72,6 +72,10 @@
             //user[@"selfIntro"] = @"This user hasn't written anything yet.";
             //user[@"following"] = [[NSArray alloc] init];
             user[@"level"] = [NSNumber numberWithInt: 1];
+            user[@"money"] = [NSNumber numberWithInt: 0];
+            user[@"in"] = [NSNumber numberWithInt: 0];
+            user[@"out"] = [NSNumber numberWithInt: 0];
+            user[@"save"] = [NSNumber numberWithInt: 0];
             [user saveInBackground];
             //manually segue to logged in view
             [self performSegueWithIdentifier:@"signuplogin" sender:nil];

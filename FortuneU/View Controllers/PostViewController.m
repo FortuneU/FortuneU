@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentCtrl;
 @property (weak, nonatomic) IBOutlet UIView *postExpenseView;
 @property (weak, nonatomic) IBOutlet UIView *postIncomeView;
+@property (weak, nonatomic) IBOutlet UIView *postSaveView;
 
 
 @end
@@ -25,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.segmentCtrl.selectedSegmentIndex = 1;
+    self.postExpenseView.alpha = 1;
+    self.postIncomeView.alpha = 0;
+    self.postSaveView.alpha = 0;
     // Do any additional setup after loading the view.
     /*
     CGFloat width = [UIScreen mainScreen].bounds.size.width * 0.4;
@@ -41,10 +45,16 @@
     if (self.segmentCtrl.selectedSegmentIndex == 0) {
         self.postExpenseView.alpha = 0;
         self.postIncomeView.alpha = 1;
+        self.postSaveView.alpha = 0;
         
-    } else {
+    } else if (self.segmentCtrl.selectedSegmentIndex == 1){
         self.postExpenseView.alpha = 1;
         self.postIncomeView.alpha = 0;
+        self.postSaveView.alpha = 0;
+    } else {
+        self.postSaveView.alpha = 1;
+        self.postIncomeView.alpha = 0;
+        self.postExpenseView.alpha = 0;
     }
 }
 - (IBAction)onCancel:(id)sender {
@@ -52,7 +62,12 @@
 }
 
 - (IBAction)onSave:(id)sender {
-    [self.delegate onTapSave];
+    if (self.segmentCtrl.selectedSegmentIndex == 0) {
+        [self.delegateI onTapSave];
+    } else {
+        [self.delegate onTapSave];
+    }
+    
     
     
 }
@@ -67,12 +82,14 @@
     // Pass the selected object to the new view controller.
     if ([[segue identifier] isEqualToString:@"income"]) {
         PostIncomeViewController *vc = (PostIncomeViewController*) [segue destinationViewController];
-        self.delegate = vc;
+        self.delegateI = vc;
+        vc.delegate2 = self.preI;
         
     } else if ([[segue identifier] isEqualToString:@"expense"]){
         PostExpenseViewController *vc = (PostExpenseViewController*) [segue destinationViewController];
         self.delegate = vc;
         vc.delegate2 = self.pre;
+        
         
     }
 }

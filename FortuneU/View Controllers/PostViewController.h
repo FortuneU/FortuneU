@@ -22,8 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PostViewController : UIViewController
 
 @property (nonatomic,weak) id<SaveTransactionDelegate> delegate;
+@property (nonatomic,weak) id<SaveTransactionDelegate> delegateI;
 
 @property (nonatomic,weak) UIViewController *pre;
+@property (nonatomic,weak) UIViewController *preI;
 
 
 @end

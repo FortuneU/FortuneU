@@ -11,8 +11,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PostIncomeViewController : UIViewController <SaveTransactionDelegate>
+@protocol UpdateTransactionIDelegate;
 
+@interface PostIncomeViewController : UIViewController <SaveTransactionDelegate>
+@property (nonatomic, strong) id<UpdateTransactionIDelegate> delegate2;
+@end
+
+@protocol UpdateTransactionIDelegate
+-(void)updateRecord;
 @end
 
 NS_ASSUME_NONNULL_END
