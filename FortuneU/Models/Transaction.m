@@ -27,6 +27,7 @@
     newTransaction.amount = amount;
     newTransaction.type = type;
     newTransaction.date = date;
+    newTransaction.memo = memo;
     
     [newTransaction saveInBackgroundWithBlock:completion];
 }

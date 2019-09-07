@@ -89,7 +89,7 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="dateLabel" destination="GaC-5X-QR1" id="DXl-Ep-VYD"/>
-                <outlet property="lineImageView" destination="H2p-sc-9uM" id="kON-c5-aTf"/>
+                <outlet property="lineImageView" destination="pbJ-xp-BO8" id="5kw-6i-Nny"/>
                 <outlet property="memoLabel" destination="dVM-D6-VQ6" id="RcK-jK-rdY"/>
                 <outlet property="moneyLabel" destination="tjV-Kf-bTN" id="kT7-Ee-SUD"/>
                 <outlet property="typeImageView" destination="278-KC-haY" id="VGD-xL-2nN"/>

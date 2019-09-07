@@ -8,6 +8,7 @@
 
 #import "RecordViewController.h"
 #import "TransactionCell.h"
+#import "Transaction.h"
 
 @interface RecordViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -28,16 +29,6 @@
 
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     TransactionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell"];
     
@@ -46,6 +37,31 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"TransactionCell"];
     }
     
+    Transaction *transaction = self.transactions[indexPath.row];
+    NSString *category = transaction[@"type"];
+    
+    //get icon view according to category
+    NSDictionary *iconDict = @{@"Food":@"Food.png",@"Transportation":@"Transport.png", @"Education":@"Education.png", @"Clothing":@"Clothing.png",@"Housing":@"Housing.png",@"Other":@"Other.png"};
+    [cell.typeImageView setImage:[UIImage imageNamed:[iconDict objectForKey:category]]];
+    
+    //get line view according to category
+    NSDictionary *lineDict = @{@"Food":@"food_l.png",@"Transportation":@"transport_l.png", @"Education":@"education_l.png", @"Clothing":@"clothing_l.png",@"Housing":@"housing_l.png",@"Other":@"other_l.png"};
+    [cell.lineImageView setImage:[UIImage imageNamed:[lineDict objectForKey:category]]];
+    
+    //date
+    NSDate *date = transaction[@"date"];
+    NSString *dateString = [self stringfromDateHelper:date];
+    cell.dateLabel.text = dateString;
+    
+    
+    //money
+    NSNumber *amountt = transaction[@"amount"];
+    int amount = [amountt intValue];
+    cell.moneyLabel.text = [NSString stringWithFormat:@"$%i",amount];
+    
+    //title or memo
+    cell.memoLabel.text = transaction[@"memo"];
+    
     return cell;
 }
 
@@ -53,6 +69,22 @@
     return self.transactions.count;
 }
 
+- (NSString *) stringfromDateHelper: (NSDate *) date {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd EEE hh:mm"];
+    NSString *dateString = [dateFormatter stringFromDate:date];
+    return dateString;
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
 @end
