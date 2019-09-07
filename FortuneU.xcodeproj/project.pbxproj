@@ -24,6 +24,8 @@
 		A5E75FC023231F6900659C4E /* PostExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75FBF23231F6900659C4E /* PostExpenseViewController.m */; };
 		A5E75FC323231F7B00659C4E /* PostIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75FC223231F7B00659C4E /* PostIncomeViewController.m */; };
 		A5E75FC72323273C00659C4E /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75FC62323273C00659C4E /* Transaction.m */; };
+		A5E75FCC2323E58800659C4E /* TransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E75FCA2323E58800659C4E /* TransactionCell.m */; };
+		A5E75FCD2323E58800659C4E /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E75FCB2323E58800659C4E /* TransactionCell.xib */; };
 		B9FBBACC00A5C679596EA5D2 /* Pods_FortuneUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994CDDE91AFE183FBEFD7B1B /* Pods_FortuneUTests.framework */; };
 		F3E4575B5EA0AFA8431C4C67 /* Pods_FortuneU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64FA83BDDD5DBFA5E01DFABA /* Pods_FortuneU.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +85,9 @@
 		A5E75FC223231F7B00659C4E /* PostIncomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostIncomeViewController.m; sourceTree = "<group>"; };
 		A5E75FC52323273C00659C4E /* Transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		A5E75FC62323273C00659C4E /* Transaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		A5E75FC92323E58800659C4E /* TransactionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionCell.h; sourceTree = "<group>"; };
+		A5E75FCA2323E58800659C4E /* TransactionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionCell.m; sourceTree = "<group>"; };
+		A5E75FCB2323E58800659C4E /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 		BF29D7E80675457B500DDB9D /* Pods-FortuneUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortuneUTests.release.xcconfig"; path = "Target Support Files/Pods-FortuneUTests/Pods-FortuneUTests.release.xcconfig"; sourceTree = "<group>"; };
 		C54ABF21AE35728F99EA02E0 /* Pods-FortuneU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortuneU.debug.xcconfig"; path = "Target Support Files/Pods-FortuneU/Pods-FortuneU.debug.xcconfig"; sourceTree = "<group>"; };
 		DE60A79FF4D3BDCA31263F5A /* Pods-FortuneUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FortuneUUITests.release.xcconfig"; path = "Target Support Files/Pods-FortuneUUITests/Pods-FortuneUUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +160,7 @@
 		A5E75F7723222BBE00659C4E /* FortuneU */ = {
 			isa = PBXGroup;
 			children = (
+				A5E75FC82323E54800659C4E /* Views */,
 				A5E75FC42323263900659C4E /* Models */,
 				A5E75FAB232232D100659C4E /* View Controllers */,
 				A5E75F7823222BBE00659C4E /* AppDelegate.h */,
@@ -216,6 +222,16 @@
 				A5E75FC62323273C00659C4E /* Transaction.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A5E75FC82323E54800659C4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5E75FC92323E58800659C4E /* TransactionCell.h */,
+				A5E75FCA2323E58800659C4E /* TransactionCell.m */,
+				A5E75FCB2323E58800659C4E /* TransactionCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AEF21EF086460655367C4279 /* Frameworks */ = {
@@ -337,6 +353,7 @@
 			files = (
 				A5E75F8523222BC000659C4E /* LaunchScreen.storyboard in Resources */,
 				A5E75F8223222BC000659C4E /* Assets.xcassets in Resources */,
+				A5E75FCD2323E58800659C4E /* TransactionCell.xib in Resources */,
 				A5E75F8023222BBE00659C4E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +467,7 @@
 			files = (
 				A5E75FB4232318BE00659C4E /* TargetViewController.m in Sources */,
 				A5E75F8823222BC000659C4E /* main.m in Sources */,
+				A5E75FCC2323E58800659C4E /* TransactionCell.m in Sources */,
 				A5E75F7A23222BBE00659C4E /* AppDelegate.m in Sources */,
 				A5E75FB7232318D000659C4E /* RecordViewController.m in Sources */,
 				A5E75FBD2323193100659C4E /* PostViewController.m in Sources */,
