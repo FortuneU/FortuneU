@@ -9,6 +9,7 @@
 #import "PostViewController.h"
 #import "PostIncomeViewController.h"
 #import "PostExpenseViewController.h"
+#import "PostSaveViewController.h"
 
 
 
@@ -91,6 +92,10 @@
         vc.delegate2 = self.pre;
         
         
+    } else if ([[segue identifier] isEqualToString:@"save"]) {
+        PostSaveViewController *vc = (PostSaveViewController*) [segue destinationViewController];
+        self.delegateS = vc;
+        vc.delegate2 = self.preS;
     }
 }
 

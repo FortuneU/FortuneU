@@ -7,11 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PostSaveViewController : UIViewController
+@protocol UpdateTransactionSDelegate;
 
+
+@interface PostSaveViewController : UIViewController <SaveTransactionDelegate>
+@property (nonatomic, strong) id<UpdateTransactionSDelegate> delegate2;
 @end
+
+@protocol UpdateTransactionSDelegate
+-(void)updateRecord;
+@end
+
 
 NS_ASSUME_NONNULL_END

@@ -143,6 +143,7 @@
          PostViewController *vc = (PostViewController*) nvc.topViewController;
          vc.pre = self;
          vc.preI = self;
+         vc.preS = self;
          //PostExpenseViewController *vce = [self.storyboard instantiateViewControllerWithIdentifier:@"postexpense"];
          //vce.delegate2 = self;
      }

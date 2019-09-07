@@ -23,9 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,weak) id<SaveTransactionDelegate> delegate;
 @property (nonatomic,weak) id<SaveTransactionDelegate> delegateI;
+@property (nonatomic,weak) id<SaveTransactionDelegate> delegateS;
 
 @property (nonatomic,weak) UIViewController *pre;
 @property (nonatomic,weak) UIViewController *preI;
+@property (nonatomic,weak) UIViewController *preS;
 
 
 @end
