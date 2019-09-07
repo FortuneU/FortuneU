@@ -71,6 +71,7 @@
             //user[@"profileImage"] = [Post getPFFileFromImage:[UIImage imageNamed:@"profilePlaceholder"] withName:@"profileImage"];
             //user[@"selfIntro"] = @"This user hasn't written anything yet.";
             //user[@"following"] = [[NSArray alloc] init];
+            user[@"level"] = [NSNumber numberWithInt: 1];
             [user saveInBackground];
             //manually segue to logged in view
             [self performSegueWithIdentifier:@"signuplogin" sender:nil];
