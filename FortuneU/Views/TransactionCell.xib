@@ -21,16 +21,16 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6K6-up-Etk">
                         <rect key="frame" x="59.5" y="0.0" width="1" height="53.5"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.80094178082191769" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="1" id="rmF-FO-uH5"/>
+                            <constraint firstAttribute="width" constant="0.80000000000000004" id="rmF-FO-uH5"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEb-pW-pif">
                         <rect key="frame" x="59.5" y="87.5" width="1" height="53"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.8005672089041096" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="1" id="aso-N7-ToV"/>
+                            <constraint firstAttribute="width" constant="0.80000000000000004" id="aso-N7-ToV"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food_l" translatesAutoresizingMaskIntoConstraints="NO" id="pbJ-xp-BO8">
@@ -100,6 +100,6 @@
     </objects>
     <resources>
         <image name="Food" width="225" height="225"/>
-        <image name="food_l" width="853" height="30"/>
+        <image name="food_l" width="873" height="45"/>
     </resources>
 </document>
