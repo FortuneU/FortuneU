@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.segmentCtrl.selectedSegmentIndex = 1;
     // Do any additional setup after loading the view.
     /*
     CGFloat width = [UIScreen mainScreen].bounds.size.width * 0.4;
@@ -40,6 +41,14 @@
         self.postIncomeView.alpha = 0;
     }
 }
+- (IBAction)onCancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)onSave:(id)sender {
+    
+}
+
 
 /*
 #pragma mark - Navigation

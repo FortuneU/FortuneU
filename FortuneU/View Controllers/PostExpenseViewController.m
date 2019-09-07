@@ -67,48 +67,90 @@
     [self resetCategory];
     [self.foodBtn setImage:[UIImage imageNamed:@"Food.png"] forState:UIControlStateNormal];
     [self.foodLabel setTextColor:[UIColor blackColor]];
-    
+    self.category = @"Food";
 }
 
 - (IBAction)OnTapTransport:(id)sender {
     [self resetCategory];
     [self.transportBtn setImage:[UIImage imageNamed:@"Transport.png"] forState:UIControlStateNormal];
     [self.transportLabel setTextColor:[UIColor blackColor]];
+    self.category = @"Transportation";
 }
 - (IBAction)OnTapEdu:(id)sender {
     [self resetCategory];
     [self.eduBtn setImage:[UIImage imageNamed:@"Education.png"] forState:UIControlStateNormal];
     [self.eduLabel setTextColor:[UIColor blackColor]];
+    self.category = @"Education";
 }
 - (IBAction)OnTapHousing:(id)sender {
     [self resetCategory];
     [self.housingBtn setImage:[UIImage imageNamed:@"Housing.png"] forState:UIControlStateNormal];
     [self.housingLabel setTextColor:[UIColor blackColor]];
+    self.category = @"Housing";
 }
 - (IBAction)OnTapClothing:(id)sender {
     [self resetCategory];
     [self.clothingBtn setImage:[UIImage imageNamed:@"Clothing.png"] forState:UIControlStateNormal];
     [self.clothingLabel setTextColor:[UIColor blackColor]];
+    self.category = @"Clothing";
 }
 - (IBAction)OnTapOther:(id)sender {
     [self resetCategory];
     [self.otherBtn setImage:[UIImage imageNamed:@"Other.png"] forState:UIControlStateNormal];
     [self.otherLabel setTextColor:[UIColor blackColor]];
+    self.category = @"Other";
 }
 
 - (IBAction)onSave:(id)sender {
-    //get category name
+    
+    if (!self.category) {
+        UIAlertController *alert;
+        alert = [UIAlertController alertControllerWithTitle:@"Warning"
+                                                    message:@"Must select one category!"
+                                             preferredStyle:(UIAlertControllerStyleAlert)];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             // handle response here.
+                                                         }];
+        // add the OK action to the alert controller
+        [alert addAction:okAction];
+        [self presentViewController:alert animated:YES completion:^{
+            // optional code for what happens after the alert controller has finished presenting
+        }];
+    }
+    
     
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     NSNumber *amount = [f numberFromString:self.amountField.text];
     
     
-    /*
-    [Transaction postTransactionWithAmount:amount withType:<#(NSString * _Nullable)#> withDate:self._datePicker.date withMemo:self.memoField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+    
+    [Transaction postTransactionWithAmount:amount withType:self.category withDate:self.datePicker.date withMemo:self.memoField.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+        
+        if (error != nil) {
+            UIAlertController *alert;
+            alert = [UIAlertController alertControllerWithTitle:@"Network Error"
+                                                        message:@"Unable to save expense! Try again later!"
+                                                 preferredStyle:(UIAlertControllerStyleAlert)];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                               style:UIAlertActionStyleDefault
+                                                             handler:^(UIAlertAction * _Nonnull action) {
+                                                                 // handle response here.
+                                                             }];
+            // add the OK action to the alert controller
+            [alert addAction:okAction];
+            [self presentViewController:alert animated:YES completion:^{
+                // optional code for what happens after the alert controller has finished presenting
+            }];
+            
+        } else {
+            
+        }
         
     }];
-    */
+    
 }
 
 /*

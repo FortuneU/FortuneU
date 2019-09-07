@@ -247,6 +247,9 @@
                                 <rect key="frame" x="20" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="SI5-6W-xcO" eventType="touchUpInside" id="8ra-Hn-XPU"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="U63-nZ-Sre">
@@ -265,6 +268,9 @@
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onSave:" destination="SI5-6W-xcO" eventType="touchUpInside" id="BRr-L9-CeB"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -276,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4z-jR-uIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1466.6666666666667" y="4194.6428571428569"/>
+            <point key="canvasLocation" x="1323" y="4194"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Xxo-EV-S4n">
@@ -637,7 +643,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XB8-1o-6Ab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863.7681159420292" y="5189.0625"/>
+            <point key="canvasLocation" x="1575" y="5193"/>
         </scene>
     </scenes>
     <resources>
