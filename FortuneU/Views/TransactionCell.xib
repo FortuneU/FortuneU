@@ -47,13 +47,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjV-Kf-bTN">
-                        <rect key="frame" x="237" y="45" width="42.5" height="20.5"/>
+                        <rect key="frame" x="225" y="45" width="42.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <color key="textColor" red="0.088908381760120392" green="0.2368493378162384" blue="0.67416602373123169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.12166816741228104" green="0.12151028960943222" blue="0.16239786148071289" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-D6-VQ6">
-                        <rect key="frame" x="237" y="75.5" width="40.5" height="17"/>
+                        <rect key="frame" x="225" y="75.5" width="40.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
                     <constraint firstItem="WEb-pW-pif" firstAttribute="top" secondItem="278-KC-haY" secondAttribute="bottom" constant="2" id="M40-mP-Z8R"/>
                     <constraint firstItem="pbJ-xp-BO8" firstAttribute="top" secondItem="GaC-5X-QR1" secondAttribute="bottom" id="TrE-U6-Akq"/>
                     <constraint firstItem="pbJ-xp-BO8" firstAttribute="centerY" secondItem="278-KC-haY" secondAttribute="centerY" id="VEq-aE-Kbe"/>
-                    <constraint firstItem="tjV-Kf-bTN" firstAttribute="leading" secondItem="pbJ-xp-BO8" secondAttribute="trailing" constant="20" id="YDb-xx-nBx"/>
+                    <constraint firstItem="tjV-Kf-bTN" firstAttribute="leading" secondItem="pbJ-xp-BO8" secondAttribute="trailing" constant="8" id="YDb-xx-nBx"/>
                     <constraint firstItem="278-KC-haY" firstAttribute="top" secondItem="6K6-up-Etk" secondAttribute="bottom" constant="2" id="YuO-T8-jov"/>
                     <constraint firstItem="278-KC-haY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="45" id="n2a-lH-K6T"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dVM-D6-VQ6" secondAttribute="trailing" constant="16" id="ngG-mq-msP"/>
