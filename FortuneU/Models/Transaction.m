@@ -7,7 +7,27 @@
 //
 
 #import "Transaction.h"
+#import "Parse/Parse.h"
 
 @implementation Transaction
+
+@dynamic user;
+@dynamic amount;
+@dynamic type;
+@dynamic date;
+
++(nonnull NSString*) parseClassName {
+    return @"Transaction";
+}
+
++ (void) postTransactionWithAmount: (NSNumber * _Nullable) amount withType: (NSString * _Nullable )type withDate:(NSDate * _Nullable)date withCompletion: (PFBooleanResultBlock _Nullable) completion{
+    Transaction *newTransaction = [Transaction new];
+    newTransaction.user = [PFUser currentUser];
+    newTransaction.amount = amount;
+    newTransaction.type = type;
+    newTransaction.date = date;
+    
+    [newTransaction saveInBackgroundWithBlock:completion];
+}
 
 @end

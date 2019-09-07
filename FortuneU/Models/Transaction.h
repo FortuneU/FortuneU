@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong,nonatomic) NSString *type;
 @property (strong,nonatomic) NSDate *date;
 
-
++ (void) postTransactionWithAmount: (NSNumber * _Nullable) amount withType: (NSString * _Nullable )type withDate:(NSDate * _Nullable)date withCompletion: (PFBooleanResultBlock _Nullable) completion;
 
 @end
 
