@@ -217,7 +217,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkd-7d-SZs">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <connections>
-                                    <segue destination="IBR-IU-7Dx" kind="embed" id="1Oe-Ve-ZLG"/>
+                                    <segue destination="qhn-YF-Exy" kind="embed" id="6XL-SU-OXS"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOl-s3-9v6">
@@ -397,22 +397,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7XO-Ac-TnJ">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="XhD-R7-R5E">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pVP-fR-GLw">
-                                <rect key="frame" x="20" y="7" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="onCancel:" destination="qhn-YF-Exy" eventType="touchUpInside" id="DgM-6D-Dhy"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="7XO-Ac-TnJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJv-Zs-NgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901" y="5679"/>
+            <point key="canvasLocation" x="896" y="5231"/>
         </scene>
         <!--Post Expense View Controller-->
         <scene sceneID="uun-52-t9B">
@@ -515,25 +504,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XB8-1o-6Ab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837.68115942029" y="5613.6160714285716"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="22q-8H-9G3">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IBR-IU-7Dx" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bh7-UH-KRX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="qhn-YF-Exy" kind="relationship" relationship="rootViewController" id="rcy-MK-zhx"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pRN-OH-h6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="913.04347826086962" y="4991.5178571428569"/>
+            <point key="canvasLocation" x="1865" y="5190"/>
         </scene>
     </scenes>
 </document>
