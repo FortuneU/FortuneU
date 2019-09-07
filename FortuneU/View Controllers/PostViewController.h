@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+@protocol SaveTransactionDelegate;
 @interface PostViewController : UIViewController
+@property (nonatomic, weak) id<SaveTransactionDelegate> delegate;
+@end
 
+@protocol SaveTransactionDelegate
+-(void)onTapSave;
 @end
 
 NS_ASSUME_NONNULL_END

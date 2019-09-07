@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PostIncomeViewController : UIViewController
+@interface PostIncomeViewController : UIViewController <SaveTransactionDelegate>
 
 @end
 

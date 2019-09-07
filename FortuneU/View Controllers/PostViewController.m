@@ -7,11 +7,16 @@
 //
 
 #import "PostViewController.h"
+#import "PostIncomeViewController.h"
+#import "PostExpenseViewController.h"
+
+
 
 @interface PostViewController ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentCtrl;
 @property (weak, nonatomic) IBOutlet UIView *postExpenseView;
 @property (weak, nonatomic) IBOutlet UIView *postIncomeView;
+
 
 @end
 
@@ -36,6 +41,7 @@
     if (self.segmentCtrl.selectedSegmentIndex == 0) {
         self.postExpenseView.alpha = 0;
         self.postIncomeView.alpha = 1;
+        
     } else {
         self.postExpenseView.alpha = 1;
         self.postIncomeView.alpha = 0;
@@ -46,18 +52,26 @@
 }
 
 - (IBAction)onSave:(id)sender {
-    
+    [self.delegate onTapSave];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"income"]) {
+        PostIncomeViewController *vc = (PostIncomeViewController*) [segue destinationViewController];
+        self.delegate = vc;
+    } else if ([[segue identifier] isEqualToString:@"expense"]){
+        PostExpenseViewController *vc = (PostExpenseViewController*) [segue destinationViewController];
+        self.delegate = vc;
+    }
 }
-*/
+
 
 @end

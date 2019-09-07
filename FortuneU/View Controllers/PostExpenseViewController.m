@@ -8,8 +8,9 @@
 
 #import "PostExpenseViewController.h"
 #import "Transaction.h"
+#import "PostViewController.h"
 
-@interface PostExpenseViewController ()
+@interface PostExpenseViewController () 
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UITextField *amountField;
 @property (weak, nonatomic) IBOutlet UITextField *memoField;
@@ -101,8 +102,7 @@
     self.category = @"Other";
 }
 
-- (IBAction)onSave:(id)sender {
-    
+- (void)onTapSave {
     if (!self.category) {
         UIAlertController *alert;
         alert = [UIAlertController alertControllerWithTitle:@"Warning"
@@ -150,8 +150,8 @@
         }
         
     }];
-    
 }
+
 
 /*
 #pragma mark - Navigation

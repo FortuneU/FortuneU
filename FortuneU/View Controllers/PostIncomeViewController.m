@@ -7,8 +7,9 @@
 //
 
 #import "PostIncomeViewController.h"
+#import "PostViewController.h"
 
-@interface PostIncomeViewController ()
+@interface PostIncomeViewController () 
 
 @end
 
@@ -18,9 +19,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-- (IBAction)onCancel:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+- (void)onTapSave {
+    
 }
+
 
 /*
 #pragma mark - Navigation
