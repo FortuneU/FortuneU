@@ -22,11 +22,57 @@
     // Do any additional setup after loading the view.
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    [self getTransactions];
 }
 - (IBAction)onTapPlusButton:(id)sender {
     [self performSegueWithIdentifier:@"compose" sender:nil];
 }
 
+- (void) getTransactions {
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Transaction"];
+    [query orderByDescending:@"date"];
+    [query includeKey:@"user"];
+    [query includeKey:@"memo"];
+    [query includeKey:@"amount"];
+    [query includeKey:@"type"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    
+    
+    // fetch data asynchronously
+    [query findObjectsInBackgroundWithBlock:^(NSArray *transactions, NSError *error) {
+        if (transactions != nil) {
+            // do something with the array of object returned by the call
+            //self.transactions = [transactions mutableCopy];
+            self.transactions = transactions;
+            //self.filteredData = self.transactions;
+            [self.tableView reloadData];
+            //[self.refreshControl endRefreshing];
+            //[self.activityIndicator stopAnimating];
+            
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Network failure."
+                                                                           message:@"Please check your network connection."
+                                                                    preferredStyle:(UIAlertControllerStyleAlert)];
+            
+            // create an OK action
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                               style:UIAlertActionStyleDefault
+                                                             handler:^(UIAlertAction * _Nonnull action) {
+                                                                 // handle response here.
+                                                             }];
+            // add the OK action to the alert controller
+            [alert addAction:okAction];
+            
+            [self presentViewController:alert animated:YES completion:^{
+                // optional code for what happens after the alert controller has finished presenting
+            }];
+        }
+        
+    }];
+    
+}
 
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
