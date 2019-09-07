@@ -173,7 +173,7 @@
             </objects>
             <point key="canvasLocation" x="517" y="2616"/>
         </scene>
-        <!--Home-->
+        <!--Record-->
         <scene sceneID="d9h-W8-aha">
             <objects>
                 <viewController id="l7L-lU-QGB" customClass="RecordViewController" sceneMemberID="viewController">
@@ -197,14 +197,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Et1-Ya-chd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="ASW-Qe-9Mn"/>
+                    <navigationItem key="navigationItem" title="Record" id="ASW-Qe-9Mn"/>
                     <connections>
                         <segue destination="GOW-Br-eeL" kind="presentation" identifier="compose" id="OGc-kR-Uar"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEp-cr-o5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1467" y="2616"/>
+            <point key="canvasLocation" x="1391" y="2616"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="yJd-AI-Crq">
