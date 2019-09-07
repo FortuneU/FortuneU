@@ -14,6 +14,22 @@
 @property (weak, nonatomic) IBOutlet UITextField *amountField;
 @property (weak, nonatomic) IBOutlet UITextField *memoField;
 
+@property (strong, nonatomic) NSString *category;
+
+@property (weak, nonatomic) IBOutlet UIButton *foodBtn;
+@property (weak, nonatomic) IBOutlet UIButton *transportBtn;
+@property (weak, nonatomic) IBOutlet UIButton *eduBtn;
+@property (weak, nonatomic) IBOutlet UIButton *housingBtn;
+@property (weak, nonatomic) IBOutlet UIButton *clothingBtn;
+@property (weak, nonatomic) IBOutlet UIButton *otherBtn;
+@property (weak, nonatomic) IBOutlet UILabel *foodLabel;
+@property (weak, nonatomic) IBOutlet UILabel *transportLabel;
+@property (weak, nonatomic) IBOutlet UILabel *eduLabel;
+@property (weak, nonatomic) IBOutlet UILabel *housingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *clothingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *otherLabel;
+
+
 
 @end
 
@@ -22,12 +38,63 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.category = nil;
 }
 
 - (IBAction)onClickCancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void) resetCategory {
+    
+    [self.foodBtn setImage:[UIImage imageNamed:@"Food_n.png"] forState:UIControlStateNormal];
+    [self.transportBtn setImage:[UIImage imageNamed:@"Transport_n.png"] forState:UIControlStateNormal];
+    [self.eduBtn setImage:[UIImage imageNamed:@"Education_n.png"] forState:UIControlStateNormal];
+    [self.housingBtn setImage:[UIImage imageNamed:@"Housing_n.png"] forState:UIControlStateNormal];
+    [self.clothingBtn setImage:[UIImage imageNamed:@"Clothing_n.png"] forState:UIControlStateNormal];
+    [self.otherBtn setImage:[UIImage imageNamed:@"Other_n.png"] forState:UIControlStateNormal];
+    
+    [self.foodLabel setTextColor:[UIColor grayColor]];
+    [self.transportLabel setTextColor:[UIColor grayColor]];
+    [self.eduLabel setTextColor:[UIColor grayColor]];
+    [self.housingLabel setTextColor:[UIColor grayColor]];
+    [self.clothingLabel setTextColor:[UIColor grayColor]];
+    [self.otherLabel setTextColor:[UIColor grayColor]];
+    
+}
+
+- (IBAction)OnTapFood:(id)sender {
+    [self resetCategory];
+    [self.foodBtn setImage:[UIImage imageNamed:@"Food.png"] forState:UIControlStateNormal];
+    [self.foodLabel setTextColor:[UIColor blackColor]];
+    
+}
+
+- (IBAction)OnTapTransport:(id)sender {
+    [self resetCategory];
+    [self.transportBtn setImage:[UIImage imageNamed:@"Transport.png"] forState:UIControlStateNormal];
+    [self.transportLabel setTextColor:[UIColor blackColor]];
+}
+- (IBAction)OnTapEdu:(id)sender {
+    [self resetCategory];
+    [self.eduBtn setImage:[UIImage imageNamed:@"Education.png"] forState:UIControlStateNormal];
+    [self.eduLabel setTextColor:[UIColor blackColor]];
+}
+- (IBAction)OnTapHousing:(id)sender {
+    [self resetCategory];
+    [self.housingBtn setImage:[UIImage imageNamed:@"Housing.png"] forState:UIControlStateNormal];
+    [self.housingLabel setTextColor:[UIColor blackColor]];
+}
+- (IBAction)OnTapClothing:(id)sender {
+    [self resetCategory];
+    [self.clothingBtn setImage:[UIImage imageNamed:@"Clothing.png"] forState:UIControlStateNormal];
+    [self.clothingLabel setTextColor:[UIColor blackColor]];
+}
+- (IBAction)OnTapOther:(id)sender {
+    [self resetCategory];
+    [self.otherBtn setImage:[UIImage imageNamed:@"Other.png"] forState:UIControlStateNormal];
+    [self.otherLabel setTextColor:[UIColor blackColor]];
+}
 
 - (IBAction)onSave:(id)sender {
     //get category name
