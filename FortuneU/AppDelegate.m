@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Parse/Parse.h"
+#import "TargetViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,6 +26,18 @@
     }];
     
     [Parse initializeWithConfiguration:config];
+    
+    #pragma mark - Persistent user login
+    if (PFUser.currentUser) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        //self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"AuthenticatedViewController"];
+        
+        TargetViewController *vc = (TargetViewController*) [storyboard instantiateViewControllerWithIdentifier:@"Authenticated"];
+        
+        self.window.rootViewController = vc;
+        
+    }
     
     return YES;
 }

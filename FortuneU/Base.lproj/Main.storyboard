@@ -378,7 +378,7 @@
         <scene sceneID="efl-zN-Ezz">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wL8-j0-gUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController id="Nxz-bW-fur" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Authenticated" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nxz-bW-fur" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lK8-Po-Wrv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
