@@ -167,9 +167,9 @@ UIImageView *human;
     currentFrame.origin.y = 0;
     currentFrame.size.height = 20;
     
-    if (expense == 0) {
+    if ([expense doubleValue] == 0) {
         currentFrame.size.width = 0;
-    } else if (income == 0) {
+    } else if ([income doubleValue]== 0) {
         currentFrame.size.width = self.exhaustionView.frame.size.width;
     } else {
         double temp = - [expense doubleValue] / [income doubleValue];
@@ -213,7 +213,7 @@ UIImageView *human;
             long numDaysTillDue = [components2 day];
             
             
-            timeFrame.size.width = (double)numDaysHasStarted / (numDaysHasStarted + numDaysTillDue) * self.timeView.frame.size.width;
+            timeFrame.size.width = (double)(numDaysHasStarted + 1) / (numDaysHasStarted + numDaysTillDue + 1) * self.timeView.frame.size.width;
         }
     }
     subTimeView.frame = timeFrame;
@@ -227,7 +227,7 @@ UIImageView *human;
     dFrame.origin.x = 0;
     dFrame.origin.y = 0;
     dFrame.size.height = 20;
-    if ((!price) || ([price isKindOfClass:[NSNull class]]) || (price == 0) || (hasSaved == 0)) {
+    if ((!price) || ([price isKindOfClass:[NSNull class]]) || ([price doubleValue] == 0) || ([hasSaved doubleValue]== 0)) {
         dFrame.size.width = 0;
         if (!human) {
             human = [[UIImageView alloc]init];

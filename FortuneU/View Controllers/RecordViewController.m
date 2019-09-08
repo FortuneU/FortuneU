@@ -14,6 +14,7 @@
 @interface RecordViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (strong,nonatomic) NSArray *transactions;
 @end
 
@@ -28,6 +29,9 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.activityIndicator startAnimating];
     [self getTransactions];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(getTransactions) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:self.refreshControl atIndex:0];
 }
 - (IBAction)onTapPlusButton:(id)sender {
     [self performSegueWithIdentifier:@"compose" sender:nil];
@@ -53,7 +57,7 @@
             self.transactions = transactions;
             //self.filteredData = self.transactions;
             [self.tableView reloadData];
-            //[self.refreshControl endRefreshing];
+            [self.refreshControl endRefreshing];
             [self.activityIndicator stopAnimating];
             
         } else {
@@ -117,7 +121,7 @@
     
     //title or memo
     cell.memoLabel.text = transaction[@"memo"];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

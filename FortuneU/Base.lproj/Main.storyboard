@@ -83,7 +83,7 @@
                         <outlet property="passwordField" destination="WwZ-II-oTM" id="8M7-1N-Zj8"/>
                         <outlet property="usernameField" destination="uDQ-Qs-pMd" id="3Xo-X8-tiH"/>
                         <segue destination="Asz-Do-oUT" kind="presentation" identifier="loginsignup" id="55x-RO-EJa"/>
-                        <segue destination="Nxz-bW-fur" kind="presentation" identifier="gethome" id="Ikr-sK-dF1"/>
+                        <segue destination="Nxz-bW-fur" kind="presentation" identifier="gethome" id="cYh-tX-ki2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -875,7 +875,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="t1P-MK-AYw">
-                                        <rect key="frame" x="25" y="210" width="330" height="46"/>
+                                        <rect key="frame" x="25" y="210" width="328" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="v6e-g4-Ncp"/>
                                         </constraints>
