@@ -28,6 +28,10 @@
 @property (weak, nonatomic) IBOutlet UIView *distanceView;
 
 @property (assign,nonatomic) BOOL goalReached;
+
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @end
 
 @implementation TargetViewController
@@ -35,8 +39,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self renew];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(renew) forControlEvents:UIControlEventValueChanged];
+    [self.scrollView insertSubview:self.refreshControl atIndex:0];
+}
+
+- (void) renew {
     [self showGoal];
     [self showBarGraphs];
+    [self.refreshControl endRefreshing];
 }
 
 - (void) initializeBarGraphs {
@@ -85,12 +98,6 @@
             
         }
     }
-    
-    
-    
-    
-    
-    
 }
 
 - (void) showBarGraphs {
