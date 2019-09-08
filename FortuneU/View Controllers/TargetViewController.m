@@ -64,7 +64,7 @@
     PFUser *me = [PFUser currentUser];
     NSNumber *income = me[@"in"];
     NSNumber *expense = me[@"out"];
-    self.exhaustionTextLabel.text = [NSString stringWithFormat:@"$%d left",([income intValue] - [expense intValue])];
+    self.exhaustionTextLabel.text = [NSString stringWithFormat:@"$%d left",([income intValue] + [expense intValue])];
     
     NSDate *due = me[@"goalDate"];
     NSNumber *price = me[@"goalPrice"];
