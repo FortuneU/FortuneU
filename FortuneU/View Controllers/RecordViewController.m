@@ -13,6 +13,7 @@
 
 @interface RecordViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong,nonatomic) NSArray *transactions;
 @end
 
@@ -25,6 +26,7 @@
     self.tableView.delegate = self;
     self.tableView.rowHeight = 80;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.activityIndicator startAnimating];
     [self getTransactions];
 }
 - (IBAction)onTapPlusButton:(id)sender {
@@ -52,7 +54,7 @@
             //self.filteredData = self.transactions;
             [self.tableView reloadData];
             //[self.refreshControl endRefreshing];
-            //[self.activityIndicator stopAnimating];
+            [self.activityIndicator stopAnimating];
             
         } else {
             NSLog(@"%@", error.localizedDescription);

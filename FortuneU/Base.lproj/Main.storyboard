@@ -457,13 +457,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="j5g-4g-2JQ">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="keu-S7-ZxK" firstAttribute="top" secondItem="2zW-L8-XK0" secondAttribute="bottom" id="6aU-EJ-SXS"/>
                             <constraint firstItem="keu-S7-ZxK" firstAttribute="bottom" secondItem="Et1-Ya-chd" secondAttribute="bottom" id="7F0-Qt-4P4"/>
                             <constraint firstItem="2zW-L8-XK0" firstAttribute="leading" secondItem="Et1-Ya-chd" secondAttribute="leading" constant="20" id="Atr-fu-shj"/>
+                            <constraint firstItem="j5g-4g-2JQ" firstAttribute="centerX" secondItem="Xku-30-uH3" secondAttribute="centerX" id="Hcg-W1-2hF"/>
                             <constraint firstItem="2zW-L8-XK0" firstAttribute="top" secondItem="Et1-Ya-chd" secondAttribute="top" constant="20" id="PLP-zD-qjH"/>
+                            <constraint firstItem="j5g-4g-2JQ" firstAttribute="centerY" secondItem="Xku-30-uH3" secondAttribute="centerY" id="QeX-rb-2mg"/>
                             <constraint firstItem="keu-S7-ZxK" firstAttribute="leading" secondItem="Et1-Ya-chd" secondAttribute="leading" id="ZGI-hS-20m"/>
                             <constraint firstItem="keu-S7-ZxK" firstAttribute="trailing" secondItem="Et1-Ya-chd" secondAttribute="trailing" id="fzr-7k-Zpw"/>
                         </constraints>
@@ -471,6 +477,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Record" id="ASW-Qe-9Mn"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="j5g-4g-2JQ" id="qrI-aU-otO"/>
                         <outlet property="tableView" destination="keu-S7-ZxK" id="6oI-Zb-c9M"/>
                         <segue destination="GOW-Br-eeL" kind="presentation" identifier="compose" id="OGc-kR-Uar"/>
                     </connections>
