@@ -536,7 +536,7 @@
                             </button>
                         </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="U63-nZ-Sre">
-                            <rect key="frame" x="90" y="7" width="240" height="30"/>
+                            <rect key="frame" x="87" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Income"/>
@@ -549,7 +549,7 @@
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="5j8-iE-CTW">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gg4-Au-34b">
-                                <rect key="frame" x="302" y="7" width="60" height="30"/>
+                                <rect key="frame" x="334" y="7" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
@@ -732,20 +732,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-kU-2NY">
-                                <rect key="frame" x="104" y="105" width="207" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-kU-2NY">
+                                <rect key="frame" x="87" y="96" width="240" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Amp-1W-vn0"/>
+                                    <constraint firstAttribute="width" constant="240" id="hVu-jE-CYM"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Income"/>
                                     <segment title="Expense"/>
                                     <segment title="Saving"/>
                                 </segments>
+                                <connections>
+                                    <action selector="OnSegmentedCtrl:" destination="DmJ-2g-DnW" eventType="valueChanged" id="fza-QL-Vs0"/>
+                                </connections>
                             </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="income" translatesAutoresizingMaskIntoConstraints="NO" id="61t-hJ-NLB">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="61t-hJ-NLB" firstAttribute="top" secondItem="1RP-kU-2NY" secondAttribute="bottom" constant="16" id="21E-3w-fxu"/>
+                            <constraint firstItem="VtI-ma-3xq" firstAttribute="trailing" secondItem="61t-hJ-NLB" secondAttribute="trailing" id="3S1-lw-S36"/>
+                            <constraint firstItem="VtI-ma-3xq" firstAttribute="bottom" secondItem="61t-hJ-NLB" secondAttribute="bottom" id="CC0-43-vln"/>
+                            <constraint firstItem="1RP-kU-2NY" firstAttribute="centerX" secondItem="qZk-PO-8rG" secondAttribute="centerX" id="LSA-lH-eh9"/>
+                            <constraint firstItem="61t-hJ-NLB" firstAttribute="leading" secondItem="VtI-ma-3xq" secondAttribute="leading" id="ah1-Ne-gKP"/>
+                            <constraint firstItem="1RP-kU-2NY" firstAttribute="top" secondItem="VtI-ma-3xq" secondAttribute="top" constant="8" id="tFh-VB-nTh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VtI-ma-3xq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Analysis" id="0Ba-A1-p5p"/>
+                    <connections>
+                        <outlet property="imageView" destination="61t-hJ-NLB" id="spZ-0k-yFT"/>
+                        <outlet property="segmentedCtrl" destination="1RP-kU-2NY" id="Xa8-Hk-EPy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckn-TT-W00" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1567,6 +1588,7 @@
         <image name="community_page" width="747" height="1154"/>
         <image name="edit_button" width="234" height="80"/>
         <image name="frame" width="950" height="524"/>
+        <image name="income" width="656" height="701"/>
         <image name="invest_n" width="225" height="225"/>
         <image name="logo1" width="802" height="316"/>
         <image name="newgoal_frame" width="950" height="232"/>
