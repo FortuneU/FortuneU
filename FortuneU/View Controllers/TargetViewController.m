@@ -48,6 +48,7 @@
 
 - (void) renew {
     [self showGoal];
+    [self initializeBarGraphs];
     [self showBarGraphs];
     [self.refreshControl endRefreshing];
 }
@@ -98,10 +99,24 @@
             
         }
     }
+    
+    self.exhaustionView.backgroundColor = [UIColor whiteColor];
+    self.exhaustionView.layer.borderColor = [UIColor colorWithRed:235.0/255 green:143.0/255 blue:144.0/255 alpha:1.0].CGColor;
+    self.exhaustionView.layer.borderWidth = 1.5;
+    
+    self.timeView.backgroundColor = [UIColor whiteColor];
+    self.timeView.layer.borderWidth = 1.5;
+    self.timeView.layer.borderColor = [UIColor colorWithRed:255/255 green:180.0/255 blue:113.0/255 alpha:1.0].CGColor;
+    
+    self.distanceView.backgroundColor = [UIColor whiteColor];
+    self.distanceView.layer.borderWidth = 1.5;
+    self.distanceView.layer.borderColor = [UIColor colorWithRed:134.0/255 green:157.0/255 blue:171.0/255 alpha:1.0].CGColor;
 }
 
 - (void) showBarGraphs {
-    [self initializeBarGraphs];
+    
+    
+    
     
 }
 
