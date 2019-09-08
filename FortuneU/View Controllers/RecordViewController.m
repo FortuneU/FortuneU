@@ -110,8 +110,8 @@
     
     //money
     NSNumber *amountt = transaction[@"amount"];
-    int amount = [amountt intValue];
-    cell.moneyLabel.text = [NSString stringWithFormat:@"$%i",amount];
+    double amount = [amountt doubleValue];
+    cell.moneyLabel.text = [NSString stringWithFormat:@"$%.2f",amount];
     
     //title or memo
     cell.memoLabel.text = transaction[@"memo"];

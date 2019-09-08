@@ -23,6 +23,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *distanceTextLabel;
 
 
+@property (weak, nonatomic) IBOutlet UIButton *goalBtn;
+
+
 @property (weak, nonatomic) IBOutlet UIView *exhaustionView;
 @property (weak, nonatomic) IBOutlet UIView *timeView;
 @property (weak, nonatomic) IBOutlet UIView *distanceView;
@@ -31,27 +34,56 @@
 
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *pathView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *goalNewImageView;
+
+
+
 
 @end
 
 @implementation TargetViewController
+UIImageView *human;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.goalNewImageView.alpha = 0;
+    self.goalBtn.alpha = 0;
+    self.goalBtn.userInteractionEnabled = NO;
     [self renew];
-    
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(renew) forControlEvents:UIControlEventValueChanged];
     [self.scrollView insertSubview:self.refreshControl atIndex:0];
+}
+- (IBAction)onTapNewGoal:(id)sender {
+    self.goalNameLabel.text = @"No goal yet";
+    self.goalPriceLabel.text = @"";
+    PFUser *me = [PFUser currentUser];
+    double k = [me[@"save"] doubleValue] - [me[@"goalPrice"] doubleValue];
+    me[@"save"] = [NSNumber numberWithDouble:k];
+    me[@"goalName"] = [NSNull null];
+    me[@"goalPrice"] = [NSNull null];
+    me[@"goalDate"] = [NSNull null];
+    me[@"goalStartDate"] = [NSNull null];
+    [me saveInBackgroundWithBlock:nil];
+    self.goalReached = NO;
+    self.goalNewImageView.alpha = 0;
+    self.goalBtn.alpha = 0;
+    self.goalBtn.userInteractionEnabled = NO;
+    [self renew];
 }
 
 - (void) renew {
     [self showGoal];
     [self initializeBarGraphs];
     [self showBarGraphs];
+    
     [self.refreshControl endRefreshing];
+    
 }
+
 
 - (void) initializeBarGraphs {
     self.exhaustionLabel.textColor = [UIColor colorWithRed:235.0/255 green:143.0/255 blue:144.0/255 alpha:1.0];
@@ -83,9 +115,9 @@
     
     NSDate *due = me[@"goalDate"];
     NSNumber *price = me[@"goalPrice"];
-    if (!due || !price) {
+    if (!due || !price || [due isKindOfClass:[NSNull class]] || [price isKindOfClass:[NSNull class]] ) {
         self.timeTextLabel.text = @"No due yet";
-        self.distanceLabel.text = @"No goal yet";
+        self.distanceTextLabel.text = @"No goal yet";
     } else {
         NSDate *now = [NSDate date];
         NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
@@ -103,14 +135,28 @@
         }
         
         NSNumber *save = me[@"save"];
+        
         int distance = ([price intValue] - [save intValue]);
-        if (distance <= 0) {
+        if ((distance - 0) <= 0.01) {
             self.goalReached = YES;
             self.distanceTextLabel.text = [NSString stringWithFormat:@"Yayyy!"];
+            self.goalBtn.alpha = 1;
+            self.goalNewImageView.alpha = 1;
+            self.goalBtn.userInteractionEnabled = YES;
         } else {
             self.goalReached = NO;
             self.distanceTextLabel.text = [NSString stringWithFormat:@"$%d to save", distance];
+            self.goalBtn.alpha = 0;
+            self.goalNewImageView.alpha = 0;
+            self.goalBtn.userInteractionEnabled = NO;
             
+        }
+        if (!save) {
+            self.goalReached = NO;
+            self.distanceTextLabel.text = [NSString stringWithFormat:@"$%d to save", distance];
+            self.goalBtn.alpha = 0;
+            self.goalNewImageView.alpha = 0;
+            self.goalBtn.userInteractionEnabled = NO;
         }
     }
     
@@ -181,10 +227,45 @@
     dFrame.origin.x = 0;
     dFrame.origin.y = 0;
     dFrame.size.height = 20;
-    dFrame.size.width = self.distanceView.frame.size.width * [hasSaved doubleValue]/ [price doubleValue];
+    if ((!price) || ([price isKindOfClass:[NSNull class]]) || (price == 0) || (hasSaved == 0)) {
+        dFrame.size.width = 0;
+        if (!human) {
+            human = [[UIImageView alloc]init];
+            [human setImage:[UIImage imageNamed:@"LV1.png"]];
+        }
+        CGRect humanFrame = human.frame;
+        humanFrame.origin.x = 0 * self.pathView.frame.size.width - 30;
+        humanFrame.origin.y = - 30;
+        humanFrame.size.height = 30;
+        humanFrame.size.width = 30;
+        human.frame = humanFrame;
+        [self.pathView addSubview:human];
+    } else {
+        if (!human) {
+            human = [[UIImageView alloc]init];
+            [human setImage:[UIImage imageNamed:@"LV1.png"]];
+        }
+        double percentage = [hasSaved doubleValue] / [price doubleValue];
+        if (percentage > 1) {
+            percentage = 1;
+        }
+        dFrame.size.width = self.distanceView.frame.size.width * percentage;
+        CGRect humanFrame = human.frame;
+        humanFrame.origin.x = percentage * self.pathView.frame.size.width - 30;
+        humanFrame.origin.y = - 30;
+        humanFrame.size.height = 30;
+        humanFrame.size.width = 30;
+        human.frame = humanFrame;
+        [self.pathView addSubview:human];
+    }
     subDistanceView.frame = dFrame;
     subDistanceView.backgroundColor = [UIColor colorWithRed:134.0/255 green:157.0/255 blue:171.0/255 alpha:1.0];
     [self.distanceView addSubview:subDistanceView];
+    
+    
+    
+    
+    
     
 }
 
@@ -204,7 +285,7 @@
     NSString *name = me[@"goalName"];
     NSNumber *price = me[@"goalPrice"];
     NSDate *date = me[@"goalDate"];
-    if ((!name) || (!price) || (!date)) {
+    if ((!name) || (!price) || (!date) || ([name isKindOfClass:[NSNull class]]) || ([price isKindOfClass:[NSNull class]]) || ([date isKindOfClass:[NSNull class]])) {
         self.goalNameLabel.text = @"No goal yet";
         self.goalPriceLabel.text = @"";
     } else {
