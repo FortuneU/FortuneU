@@ -179,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="813" y="108"/>
         </scene>
-        <!--Target View Controller-->
+        <!--My Goal-->
         <scene sceneID="Hud-qu-h8Z">
             <objects>
                 <viewController id="V5s-DI-Z4Z" customClass="TargetViewController" sceneMemberID="viewController">
@@ -348,7 +348,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i84-NB-Uof"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4EK-K5-o2c"/>
+                    <navigationItem key="navigationItem" title="My Goal" id="4EK-K5-o2c"/>
                     <connections>
                         <outlet property="distanceLabel" destination="U7z-KY-Jg1" id="WVb-Ug-5kn"/>
                         <outlet property="distanceTextLabel" destination="UQf-EH-zMM" id="qrA-aL-jia"/>

@@ -62,6 +62,20 @@
     self.timeTextLabel.textColor = [UIColor colorWithRed:255/255 green:180.0/255 blue:113.0/255 alpha:1.0];
     self.distanceTextLabel.textColor = [UIColor colorWithRed:134.0/255 green:157.0/255 blue:171.0/255 alpha:1.0];
     
+    self.exhaustionView.backgroundColor = [UIColor whiteColor];
+    self.exhaustionView.layer.borderColor = [UIColor colorWithRed:235.0/255 green:143.0/255 blue:144.0/255 alpha:1.0].CGColor;
+    self.exhaustionView.layer.borderWidth = 1.5;
+    
+    self.timeView.backgroundColor = [UIColor whiteColor];
+    self.timeView.layer.borderWidth = 1.5;
+    self.timeView.layer.borderColor = [UIColor colorWithRed:255/255 green:180.0/255 blue:113.0/255 alpha:1.0].CGColor;
+    
+    self.distanceView.backgroundColor = [UIColor whiteColor];
+    self.distanceView.layer.borderWidth = 1.5;
+    self.distanceView.layer.borderColor = [UIColor colorWithRed:134.0/255 green:157.0/255 blue:171.0/255 alpha:1.0].CGColor;
+}
+
+- (void) showBarGraphs {
     PFUser *me = [PFUser currentUser];
     NSNumber *income = me[@"in"];
     NSNumber *expense = me[@"out"];
@@ -78,9 +92,9 @@
         
         // Notice the components:NSDayCalendarUnit specifier
         NSDateComponents *components = [calendar components:NSCalendarUnitDay
-                                                            fromDate:now
-                                                              toDate:due
-                                                             options:0];
+                                                   fromDate:now
+                                                     toDate:due
+                                                    options:0];
         long numDays = [components day];
         if (numDays < 0) {
             self.timeTextLabel.text = @"Past due";
@@ -100,24 +114,85 @@
         }
     }
     
-    self.exhaustionView.backgroundColor = [UIColor whiteColor];
-    self.exhaustionView.layer.borderColor = [UIColor colorWithRed:235.0/255 green:143.0/255 blue:144.0/255 alpha:1.0].CGColor;
-    self.exhaustionView.layer.borderWidth = 1.5;
     
-    self.timeView.backgroundColor = [UIColor whiteColor];
-    self.timeView.layer.borderWidth = 1.5;
-    self.timeView.layer.borderColor = [UIColor colorWithRed:255/255 green:180.0/255 blue:113.0/255 alpha:1.0].CGColor;
+    UIView *subExhaustionView = [[UIView alloc] init];
+    CGRect currentFrame = subExhaustionView.frame;
+    currentFrame.origin.x = 0;
+    currentFrame.origin.y = 0;
+    currentFrame.size.height = 20;
     
-    self.distanceView.backgroundColor = [UIColor whiteColor];
-    self.distanceView.layer.borderWidth = 1.5;
-    self.distanceView.layer.borderColor = [UIColor colorWithRed:134.0/255 green:157.0/255 blue:171.0/255 alpha:1.0].CGColor;
+    if (expense == 0) {
+        currentFrame.size.width = 0;
+    } else if (income == 0) {
+        currentFrame.size.width = self.exhaustionView.frame.size.width;
+    } else {
+        double temp = - [expense doubleValue] / [income doubleValue];
+        currentFrame.size.width = self.exhaustionView.frame.size.width * temp;
+    }
+    subExhaustionView.frame = currentFrame;
+    subExhaustionView.backgroundColor = [UIColor colorWithRed:235.0/255 green:143.0/255 blue:144.0/255 alpha:1.0];
+    [self.exhaustionView addSubview:subExhaustionView];
+    
+    
+    UIView *subTimeView = [[UIView alloc] init];
+    CGRect timeFrame = subTimeView.frame;
+    timeFrame.origin.x = 0;
+    timeFrame.origin.y = 0;
+    timeFrame.size.height = 20;
+    if ([self.timeTextLabel.text isEqualToString: @"No due yet"]) {
+        timeFrame.size.width = 0;
+    } else if ([self.timeTextLabel.text isEqualToString:@"Past due"]) {
+        timeFrame.size.width = self.timeView.frame.size.width;
+    } else {
+        NSDate *now = [NSDate date];
+        NSDate *first = me[@"goalStartDate"];
+        NSCalendar *calendar1 = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+        
+        // Notice the components:NSDayCalendarUnit specifier
+        NSDateComponents *components1 = [calendar1 components:NSCalendarUnitDay
+                                                   fromDate:first
+                                                     toDate:now
+                                                    options:0];
+        long numDaysHasStarted = [components1 day];
+        if (numDaysHasStarted == 0) {
+            timeFrame.size.width = 0;
+        } else {
+            NSCalendar *calendar2 = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+            
+            // Notice the components:NSDayCalendarUnit specifier
+            NSDateComponents *components2 = [calendar2 components:NSCalendarUnitDay
+                                                         fromDate:now
+                                                           toDate:due
+                                                          options:0];
+            long numDaysTillDue = [components2 day];
+            
+            
+            timeFrame.size.width = (double)numDaysHasStarted / (numDaysHasStarted + numDaysTillDue) * self.timeView.frame.size.width;
+        }
+    }
+    subTimeView.frame = timeFrame;
+    subTimeView.backgroundColor = [UIColor colorWithRed:255/255 green:180.0/255 blue:113.0/255 alpha:1.0];
+    [self.timeView addSubview:subTimeView];
+    
+    
+    NSNumber *hasSaved = me[@"save"];
+    UIView *subDistanceView = [[UIView alloc] init];
+    CGRect dFrame = subDistanceView.frame;
+    dFrame.origin.x = 0;
+    dFrame.origin.y = 0;
+    dFrame.size.height = 20;
+    dFrame.size.width = self.distanceView.frame.size.width * [hasSaved doubleValue]/ [price doubleValue];
+    subDistanceView.frame = dFrame;
+    subDistanceView.backgroundColor = [UIColor colorWithRed:134.0/255 green:157.0/255 blue:171.0/255 alpha:1.0];
+    [self.distanceView addSubview:subDistanceView];
+    
 }
 
-- (void) showBarGraphs {
-    
-    
-    
-    
+- (NSString *) stringfromDateHelper: (NSDate *) date {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM/dd EEE hh:mm"];
+    NSString *dateString = [dateFormatter stringFromDate:date];
+    return dateString;
 }
 
 - (IBAction)onEdit:(id)sender {

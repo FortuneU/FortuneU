@@ -48,6 +48,7 @@
         NSNumber *price = [f numberFromString:self.priceTextField.text];
         me[@"goalPrice"] = price;
         me[@"goalDate"] = self.datePicker.date;
+        me[@"goalStartDate"] = [NSDate date];
         [me saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error){
             if (succeeded) {
                 [self.delegate didEditGoal:self.thingTextField.text price:self.priceTextField.text];
