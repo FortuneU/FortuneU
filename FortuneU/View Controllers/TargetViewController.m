@@ -19,6 +19,10 @@
     // Do any additional setup after loading the view.
 }
 
+- (IBAction)onEdit:(id)sender {
+    [self performSegueWithIdentifier:@"editGoal" sender:nil];
+}
+
 /*
 #pragma mark - Navigation
 

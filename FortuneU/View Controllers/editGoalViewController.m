@@ -9,6 +9,9 @@
 #import "editGoalViewController.h"
 
 @interface editGoalViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *thingTextField;
+@property (weak, nonatomic) IBOutlet UITextField *priceTextField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 @end
 
@@ -17,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)onSave:(id)sender {
+}
+- (IBAction)onCancel:(id)sender {
 }
 
 /*
