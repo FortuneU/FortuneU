@@ -10,8 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface editGoalViewController : UIViewController
+@protocol EditGoalDelegate;
 
+@interface editGoalViewController : UIViewController
+@property (strong,nonatomic) id<EditGoalDelegate> delegate;
 @end
+
+@protocol EditGoalDelegate
+-(void) didEditGoal;
+@end
+
 
 NS_ASSUME_NONNULL_END

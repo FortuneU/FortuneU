@@ -103,9 +103,25 @@
 }
 
 - (void)onTapSave {
-    if (!self.category) {
+    
+    
+    if ([self.amountField.text isEqualToString:@""]) {
+        UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                        message:@"Amount cannot be non-empty!"
+                                                                 preferredStyle:(UIAlertControllerStyleAlert)];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             // handle response here.
+                                                         }];
+        // add the OK action to the alert controller
+        [alert addAction:okAction];
+        [self presentViewController:alert animated:YES completion:^{
+            // optional code for what happens after the alert controller has finished presenting
+        }];
+    } else if (!self.category) {
         UIAlertController *alert;
-        alert = [UIAlertController alertControllerWithTitle:@"Warning"
+        alert = [UIAlertController alertControllerWithTitle:@"Error"
                                                     message:@"Must select one category!"
                                              preferredStyle:(UIAlertControllerStyleAlert)];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"

@@ -48,39 +48,42 @@
         [self presentViewController:self.alert animated:YES completion:^{
             // optional code for what happens after the alert controller has finished presenting
         }];
+    } else {
+        // initialize a user object
+        PFUser *newUser = [PFUser user];
+        
+        // set user properties
+        newUser.username = self.usernameField.text;
+        
+        newUser.password = self.passwordField.text;
+        
+        
+        
+        // call sign up function on the object
+        [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
+            if (error != nil) {
+                NSLog(@"Error: %@", error.localizedDescription);
+            } else {
+                NSLog(@"User registered successfully");
+                PFUser *user = [PFUser currentUser];
+                //user[@"profileImage"] = [Post getPFFileFromImage:[UIImage imageNamed:@"profilePlaceholder"] withName:@"profileImage"];
+                //user[@"selfIntro"] = @"This user hasn't written anything yet.";
+                //user[@"following"] = [[NSArray alloc] init];
+                user[@"level"] = [NSNumber numberWithInt: 1];
+                user[@"money"] = [NSNumber numberWithInt: 0];
+                user[@"in"] = [NSNumber numberWithInt: 0];
+                user[@"out"] = [NSNumber numberWithInt: 0];
+                user[@"save"] = [NSNumber numberWithInt: 0];
+                
+                [user saveInBackground];
+                //manually segue to logged in view
+                [self performSegueWithIdentifier:@"signuplogin" sender:nil];
+            }
+        }];
     }
     
     
-    // initialize a user object
-    PFUser *newUser = [PFUser user];
     
-    // set user properties
-    newUser.username = self.usernameField.text;
-    
-    newUser.password = self.passwordField.text;
-    
-    
-    
-    // call sign up function on the object
-    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
-        if (error != nil) {
-            NSLog(@"Error: %@", error.localizedDescription);
-        } else {
-            NSLog(@"User registered successfully");
-            PFUser *user = [PFUser currentUser];
-            //user[@"profileImage"] = [Post getPFFileFromImage:[UIImage imageNamed:@"profilePlaceholder"] withName:@"profileImage"];
-            //user[@"selfIntro"] = @"This user hasn't written anything yet.";
-            //user[@"following"] = [[NSArray alloc] init];
-            user[@"level"] = [NSNumber numberWithInt: 1];
-            user[@"money"] = [NSNumber numberWithInt: 0];
-            user[@"in"] = [NSNumber numberWithInt: 0];
-            user[@"out"] = [NSNumber numberWithInt: 0];
-            user[@"save"] = [NSNumber numberWithInt: 0];
-            [user saveInBackground];
-            //manually segue to logged in view
-            [self performSegueWithIdentifier:@"signuplogin" sender:nil];
-        }
-    }];
 }
 /*
 #pragma mark - Navigation

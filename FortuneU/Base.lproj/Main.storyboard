@@ -251,6 +251,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="4EK-K5-o2c"/>
                     <connections>
+                        <outlet property="goalImageView" destination="svh-5H-JTP" id="hYl-Vu-yNN"/>
+                        <outlet property="goalNameLabel" destination="O9L-hw-hot" id="q7o-O6-GNx"/>
+                        <outlet property="goalPriceLabel" destination="RSk-Z7-xHy" id="Axi-sd-pJI"/>
                         <segue destination="JUn-15-Z2C" kind="presentation" identifier="editGoal" modalPresentationStyle="overCurrentContext" id="pPH-gE-GXI"/>
                     </connections>
                 </viewController>

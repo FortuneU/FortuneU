@@ -7,6 +7,8 @@
 //
 
 #import "editGoalViewController.h"
+#import "TargetViewController.h"
+#import "Parse/Parse.h"
 
 @interface editGoalViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *thingTextField;
@@ -22,8 +24,32 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)onSave:(id)sender {
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Error"
+                                                     message:@"All fields should be non-empty!"
+                                              preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+                                                         // handle response here.
+                                                     }];
+    // add the OK action to the alert controller
+    [alert addAction:okAction];
+    
+    if ([self.thingTextField.text isEqualToString:@""] || [self.priceTextField.text isEqualToString:@""]) {
+        [self presentViewController:alert animated:YES completion:^{
+            // optional code for what happens after the alert controller has finished presenting
+        }];
+    } else {
+        PFUser *me = [PFUser currentUser];
+        
+        
+        [self.delegate didEditGoal];
+    }
+    
+    
 }
 - (IBAction)onCancel:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

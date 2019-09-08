@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "editGoalViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TargetViewController : UIViewController
+@interface TargetViewController : UIViewController <EditGoalDelegate>
 
 @end
 
