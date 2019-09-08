@@ -63,6 +63,9 @@
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
             if (error != nil) {
                 NSLog(@"Error: %@", error.localizedDescription);
+                [self presentViewController:self.alert animated:YES completion:^{
+                    // optional code for what happens after the alert controller has finished presenting
+                }];
             } else {
                 NSLog(@"User registered successfully");
                 PFUser *user = [PFUser currentUser];

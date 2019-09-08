@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @protocol EditGoalDelegate
--(void) didEditGoal;
+-(void) didEditGoal:(NSString *)name price:(NSString *)pString;
 @end
 
 

@@ -40,12 +40,18 @@
     } else {
         self.goalNameLabel.text = name;
         double p = [price doubleValue];
-        self.goalPriceLabel.text = [NSString stringWithFormat:@"%f",p];
+        self.goalPriceLabel.text = [NSString stringWithFormat:@"$%.2f",p];
     }
 }
 
--(void) didEditGoal {
-    [self showGoal];
+-(void) didEditGoal:(NSString *)name price:(NSString *)pString{
+    self.goalNameLabel.text = name;
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber *price = [f numberFromString:pString];
+    double p = [price doubleValue];
+    self.goalPriceLabel.text = [NSString stringWithFormat:@"$%.2f",p];
+    
 }
 
 #pragma mark - Navigation
