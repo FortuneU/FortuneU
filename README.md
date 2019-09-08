@@ -9,3 +9,9 @@ fit <- stl(myts, s.window="period")
 plot(fit)
 plot(forecast(fit))
 ```
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://g.recordit.co/WgZCOUOYUw.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
