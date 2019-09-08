@@ -15,6 +15,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *goalNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *goalPriceLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *exhaustionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *exhaustionTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceTextLabel;
+
+
+@property (weak, nonatomic) IBOutlet UIView *exhaustionView;
+@property (weak, nonatomic) IBOutlet UIView *timeView;
+@property (weak, nonatomic) IBOutlet UIView *distanceView;
+
+@property (assign,nonatomic) BOOL goalReached;
 @end
 
 @implementation TargetViewController
@@ -23,6 +36,66 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self showGoal];
+    [self showBarGraphs];
+}
+
+- (void) initializeBarGraphs {
+    self.exhaustionLabel.textColor = [UIColor colorWithRed:235.0/255 green:143.0/255 blue:144.0/255 alpha:1.0];
+    self.timeLabel.textColor = [UIColor colorWithRed:255/255 green:180.0/255 blue:113.0/255 alpha:1.0];
+    self.distanceLabel.textColor = [UIColor colorWithRed:134.0/255 green:157.0/255 blue:171.0/255 alpha:1.0];
+    
+    self.exhaustionTextLabel.textColor = [UIColor colorWithRed:235.0/255 green:143.0/255 blue:144.0/255 alpha:1.0];
+    self.timeTextLabel.textColor = [UIColor colorWithRed:255/255 green:180.0/255 blue:113.0/255 alpha:1.0];
+    self.distanceTextLabel.textColor = [UIColor colorWithRed:134.0/255 green:157.0/255 blue:171.0/255 alpha:1.0];
+    
+    PFUser *me = [PFUser currentUser];
+    NSNumber *income = me[@"in"];
+    NSNumber *expense = me[@"out"];
+    self.exhaustionTextLabel.text = [NSString stringWithFormat:@"$%d left",([income intValue] - [expense intValue])];
+    
+    NSDate *due = me[@"goalDate"];
+    NSNumber *price = me[@"goalPrice"];
+    if (!due || !price) {
+        self.timeTextLabel.text = @"No due yet";
+        self.distanceLabel.text = @"No goal yet";
+    } else {
+        NSDate *now = [NSDate date];
+        NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+        
+        // Notice the components:NSDayCalendarUnit specifier
+        NSDateComponents *components = [calendar components:NSCalendarUnitDay
+                                                            fromDate:now
+                                                              toDate:due
+                                                             options:0];
+        long numDays = [components day];
+        if (numDays < 0) {
+            self.timeTextLabel.text = @"Past due";
+        } else {
+            self.timeTextLabel.text = [NSString stringWithFormat:@"%ld days left",numDays];
+        }
+        
+        NSNumber *save = me[@"save"];
+        int distance = ([price intValue] - [save intValue]);
+        if (distance <= 0) {
+            self.goalReached = YES;
+            self.distanceTextLabel.text = [NSString stringWithFormat:@"Yayyy!"];
+        } else {
+            self.goalReached = NO;
+            self.distanceTextLabel.text = [NSString stringWithFormat:@"$%d to save", distance];
+            
+        }
+    }
+    
+    
+    
+    
+    
+    
+}
+
+- (void) showBarGraphs {
+    [self initializeBarGraphs];
+    
 }
 
 - (IBAction)onEdit:(id)sender {
