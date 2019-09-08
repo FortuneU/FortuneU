@@ -18,7 +18,7 @@ The following functionality is completed:
 The following functionality is in progress:
 - [x] User can post and see their friends' posts about good tips or their stories on saving
 - [x] User can see a weekly analyasis for their financial performance
-Below is one chunk of R code that we used for analysis:
+- Below is one chunk of R code that we used for analysis:
 ```r
 library(forecast)
 vector = c(10,0,20,50,100,0,200,5,5,5,20,100,10, 10, 0, 5, 5, 20, 50, 0, 20 )
